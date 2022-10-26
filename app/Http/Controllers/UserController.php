@@ -18,10 +18,16 @@ class UserController extends Controller
         if(auth()->attempt($validated)){
             $request->session()->regenerate();
 
-            return redirect('/')->with('message','Welcome');
+            return redirect('/dashboard')->with('message','Welcome');
+        }else{
+            return redirect('/dashboard')->with('message','login failed');        
         }
+
     }
     //end
+    public function about(){
+        return view('about');
+    }
 
     public function index(){
         return view('welcome');
@@ -44,6 +50,10 @@ class UserController extends Controller
     }
 
 
+
+    public function homepage(){
+        return view('homepage');    
+    }
 
 
     
@@ -71,7 +81,7 @@ class UserController extends Controller
     
         $user = User::create($validated); // create a variable and call the User mo
         auth()->login($user);
-        return redirect('/login');
+        return redirect('/Login');
 }
 //for logout function
    public function logout(Request $request){
@@ -80,7 +90,7 @@ class UserController extends Controller
     $request->session()->invalidate();
     $request->session()->regenerateToken();
 
-    return redirect('/login')->with('message','Log out successful');
+    return redirect('/Login')->with('message','Log out successful');
    }
 
 }

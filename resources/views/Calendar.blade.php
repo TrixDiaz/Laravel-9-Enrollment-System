@@ -34,7 +34,7 @@
                     <div class="menu">
                         <ul class="menu-links">
                             <li class="nav-link">
-                            <a href="{{url('/')}}">
+                            <a href="{{url('/dashboard')}}">
                                 <i class='bx bx-home icon'  ></i>
                                 <span class="text nav-text">Dashboard</span>
                             </a>

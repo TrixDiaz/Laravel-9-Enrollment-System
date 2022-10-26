@@ -30,9 +30,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('Password');
 // });
 
-Route::get('/',[UserController::class,'index'])->middleware('auth');
+Route::get('/dashboard',[UserController::class,'index'])->middleware('auth');
 
-Route::get('/login',[UserController::class,'login'])->name('login');
+Route::get('/',[UserController::class,'homepage']);
+
+Route::get('/Login',[UserController::class,'login'])->name('login');
 
 Route::get('/register',[UserController::class,'register']);
 
@@ -41,6 +43,11 @@ Route::get('/Password', [UserController::class,'password']);
 Route::get('/enrollment',[UserController::class,'enrollment']);
 
 Route::get('/Calendar', [UserController::class, 'Calendar']);
+
+Route::get('/about', [UserController::class, 'about']);
+
+
+
 
 Route::post('/login/process',[UserController::class,'process']);
 
