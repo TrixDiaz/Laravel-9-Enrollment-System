@@ -42,7 +42,7 @@
 <div class="innovation-col">
     <h3>Mission</h3>
     <p>To provide relevant education for youth's intellectual, psychological, spiritual and environmental awareness through responsive approaches</p>
-
+    <p>aosdhasidhiquwhdqiwudhqwiudhqwuidhqw</p>
 </div>
 
 <div class="innovation-col">
