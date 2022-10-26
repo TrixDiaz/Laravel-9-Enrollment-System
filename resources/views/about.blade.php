@@ -54,7 +54,7 @@
 <div class="innovation-col">
     <h3>Core Values</h3>
     <p>Maka-Dios <br> Maka-Tao <br> Makakalikasan <br> Makabansa</p>
-
+    <p>Lorem ipsum dolor sit amet.</p>
 </div>
 
 </section>
