@@ -49,10 +49,18 @@ class UserController extends Controller
         return view('Calendar');
     }
 
+    public function contact(){
+        return view('contact');
+    }
+
 
 
     public function homepage(){
         return view('homepage');    
+    }
+
+    public function course(){
+        return view('course');    
     }
 
 

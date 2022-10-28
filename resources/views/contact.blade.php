@@ -25,44 +25,45 @@
                     <ul>
                         <li><a href="{{('/homepage')}}">Home</a> </li>
                         <li><a href="{{('/course')}}">Course</a> </li>
-                        <li><a href="">About</a> </li>
-                        <li><a href="{{('/contact')}}">Contact</a> </li>
+                        <li><a href="{{('/about')}}">About</a> </li>
+                        <li><a href="">Contact</a> </li>
                         <li><a href="{{('/Login')}}">Login</a> </li>
                     </ul>
 
                 </div>
                 <i class="fa fa-solid fa-bars-progress" onclick="showMenu()"></i>
             </nav>
-            <h1>About</h1>
+            <h1>Contact Us</h1>
         </section>
-<!------ content --------->
-<section class="innovation">
+<!------ Course --------->
+<section class="section-contact">
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input 
+                    type="text" name="firstname" id="firstname" required class="form-element"placeholder="Diosd.." />
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" required class="form-element" placeholder="Feli.." />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required class="form-element" placeholder="diosd..@example.com" />
+            </div>
 
-    <div class="row">
-<div class="innovation-col">
-    <h3>Mission</h3>
-    <p>To provide relevant education for youth's intellectual, psychological, spiritual and environmental awareness through responsive approaches</p>
-    
-</div>
-
-<div class="innovation-col">
-    <h3>Vission</h3>
-    <p>Is an educational institution developing well-rounded individuals for the establishment of a self-reliant and responsive community.</p>
-
-</div>
-
-<div class="innovation-col">
-    <h3>Core Values</h3>
-    <p>Maka-Dios <br> Maka-Tao <br> Makakalikasan <br> Makabansa</p>
-  
-</div>
-
+            <div class="form-group full">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" class="form-element" placeholder="Input Message Here!!"></textarea>
+            </div>
+            <div class="submit-group">
+                <input type="submit" value="SEND MESSAGE" />
+            </div>
+        </form>
+    </div>
 </section>
-    <!------ Course --------->
-    <section class="course">
-       
- 
-    </section>
+
 <!----------FOOTER------------->
 <footer class="footer">
     <div class="container">

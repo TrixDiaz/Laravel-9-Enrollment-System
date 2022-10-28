@@ -46,6 +46,11 @@ Route::get('/Calendar', [UserController::class, 'Calendar']);
 
 Route::get('/about', [UserController::class, 'about']);
 
+Route::get('/course', [UserController::class, 'course']);
+
+Route::get('/homepage', [UserController::class, 'homepage']);
+
+Route::get('/contact', [UserController::class, 'contact']);
 
 
 

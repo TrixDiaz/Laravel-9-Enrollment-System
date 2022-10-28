@@ -17,14 +17,14 @@
     <body>
 
     
-        <section class="header">
+        <section class="sub-header">
             <nav>
                 <a href="/homepage"><img src="/images/channels4_profile.jpg"></a>
                 <div class="nav-links" id="navLinks">
                     <i class="fa fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
                     <ul>
-                        <li><a href="">Home</a> </li>
-                        <li><a href="{{('/course')}}">Course</a> </li>
+                        <li><a href="{{('/homepage')}}">Home</a> </li>
+                        <li><a href="">Course</a> </li>
                         <li><a href="{{('/about')}}">About</a> </li>
                         <li><a href="{{('/contact')}}">Contact</a> </li>
                         <li><a href="{{('/Login')}}">Login</a> </li>
@@ -33,43 +33,9 @@
                 </div>
                 <i class="fa fa-solid fa-bars-progress" onclick="showMenu()"></i>
             </nav>
-            <div class="text-box">
-                <h1>Amlac Senior High School</h1>
-            </div>
+            <h1>Courses</h1>
         </section>
-<!------ INNOVATION --------->
-
-<!------ INNOVATION --------->
-<section class="innovation">
-        <h1>Innovation</h1>
-        
-
-        <div class="row">
-    <div class="innovation-col">
-        <h3>Inform</h3>
-        <p>This way, we feel it’s easiest to accumulate new knowledge and reshape our existing understanding on different areas of innovation.</p>
-
-    </div>
-
-    <div class="innovation-col">
-        <h3>Connect</h3>
-        <p>Self-discipline is an act of cultivation. It requires you to connect today's actions to tomorrow's results. There's a season for sowing a season for reaping. Self-discipline helps you know which is which</p>
-
-    </div>
-
-    <div class="innovation-col">
-        <h3>Transform</h3>
-        <p>To improve is to change to be perfect.</p>
-
-    </div>
-
-    </section>
-        <!------ Course --------->
-        <section class="course">
-            <h1>Courses Offer</h1>
-     
-        </section>
-
+<!------ Course --------->
 <section class="Amlac" id="Courses">
     <div class="container-1">
         <div class="Amlac" style="max-width:600px">
@@ -149,12 +115,11 @@
         </div>
     </div>
 </section>
-<!----------Enrollment Here------------->
-<section class="Enrollment">
-    <h1>Open enrollment <br>The Future Begins Here!</h1>
-    <a href="/enrollment" class="hero-btn">Enroll Now</a>
-</section>
 
+
+
+<!------ facilities --------->
+ 
 <!----------FOOTER------------->
 <footer class="footer">
     <div class="container">
