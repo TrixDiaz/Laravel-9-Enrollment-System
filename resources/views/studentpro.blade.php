@@ -8,6 +8,7 @@
         <!--- Js --->
         <!--- CSS --->
         <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/studentinformation.css" rel="stylesheet">
         <!-- BOX icons -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -43,7 +44,7 @@
                         </a>
                         </li>
                         <li class="nav-link">
-                            <a href="{{('/Calendar')}}">
+                            <a href="{{url('/Calendar')}}">
                                 <i class='bx bx-calendar icon'></i>
                                 <span class="text nav-text">Calendar</span>
                             </a>
@@ -57,7 +58,7 @@
                                     </a>
                                     </li>
                                     <li class="nav-link">
-                                        <a href="{{('/studentpro')}}">
+                                        <a href="#">
                                             <i class='bx bx-user-pin icon'></i>
                                             <span class="text nav-text">Student Profile</span>
                                         </a>
@@ -102,10 +103,22 @@
         </div>
         </nav>
         <section class="home">
-            <div class="text">Dashboard</div>
-            
+            <div class="text">Student Profile</div>
+        
+            <body>
+                
+                <div class="profile-pic-div">
+                  <img src="/images/image.jpg" id="photo">
+                  <input type="file" id="file">
+                  <label for="file" id="uploadBtn">Choose Photo</label>
+                </div>
+                
+                <script src="app.js"></script>
+                
+                </body>
 
         </section>
         <script src="/js/script.js"></script>    
+        <script src="/js/studentpro.js"></script>    
 </body>
 </html>

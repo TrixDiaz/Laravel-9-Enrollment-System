@@ -44,6 +44,8 @@ Route::get('/enrollment',[UserController::class,'enrollment']);
 
 Route::get('/Calendar', [UserController::class, 'Calendar']);
 
+Route::get('/studentpro', [UserController::class, 'studentpro']);
+
 Route::get('/about', [UserController::class, 'about']);
 
 Route::get('/course', [UserController::class, 'course']);

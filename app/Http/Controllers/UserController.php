@@ -63,6 +63,10 @@ class UserController extends Controller
         return view('course');    
     }
 
+    public function studentpro(){
+        return view('studentpro');    
+    }
+
 
     
     //for login view 
