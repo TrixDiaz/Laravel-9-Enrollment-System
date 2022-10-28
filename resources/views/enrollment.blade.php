@@ -61,6 +61,21 @@
                             <label>Date of Birth</label>
                             <input type="date" placeholder="Enter birth date" required>
                         </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" placeholder="Enter birth date" required>
+                        </div>
                     </div>
                 </div>
 
@@ -98,20 +113,6 @@
                     <input type="text" placeholder="Enter your Primary Address" required>
                    </div>
                         
-                    <div class="input-field">
-                        <label>Status</label>
-                        <select required>
-                            <option disabled selected>Status</option>
-                            <option>Single</option>
-                            <option>Married</option>
-                            <option>Widow</option>
-                        </select>
-                    </div>
-                    </div>
-
-                  
-
-
 
                     <button class="nextBtn">
                         <span class="btnText">Next</span>
