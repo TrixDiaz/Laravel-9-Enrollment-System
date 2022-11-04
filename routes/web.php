@@ -61,4 +61,3 @@ Route::post('/login/process',[UserController::class,'process']);
 Route::post('/store',[UserController::class,'store']);
 
 Route::post('/logout',[UserController::class,'logout']);
-

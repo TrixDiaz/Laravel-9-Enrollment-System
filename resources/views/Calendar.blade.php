@@ -10,6 +10,7 @@
         <link href="/css/style.css" rel="stylesheet">
         <!-- BOX icons -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/72ceecc077.js" crossorigin="anonymous"></script>
         <!-- Calendar -->
         <link href="/css/calendar.css" rel="stylesheet">
 
@@ -60,7 +61,7 @@
                                             </a>
                                             </li>
                                             <li class="nav-link">
-                                                <a href="#">
+                                                <a href="{{('/studentpro')}}">
                                                     <i class='bx bx-user-pin icon'></i>
                                                     <span class="text nav-text">Student Profile</span>
                                                 </a>
@@ -71,12 +72,7 @@
                                                         <span class="text nav-text">Grades</span>
                                                     </a>
                                                     </li>
-                                                    <li class="nav-link">
-                                                        <a href="#">
-                                                            <i class='bx bxs-user-account icon' ></i>
-                                                            <span class="text nav-text">Setting</span>
-                                                        </a>
-                                                        </li>
+                                                    
                                    
                                                         
                                                             <form action='/logout' method="POST">
@@ -112,28 +108,41 @@
                 </section>
                 
                 <body>
-                    <div class="container">
-                      <div class="calendar">
-                        <div class="month">
-                          <i class="fas fa-angle-left prev"></i>
-                          <div class="date">
-                            <h1></h1>
-                            <p></p>
-                          </div>
-                          <i class="fas fa-angle-right next"></i>
+                <div class="calendar disable-selection" id="calendar">
+                    <div class="left-side">
+                        <div class="current-day text-center">
+                            <h1 class="calendar-left-side-day"></h1>
+                            <div class="calendar-left-side-day-of-week"></div>
                         </div>
-                        <div class="weekdays">
-                          <div>Sun</div>
-                          <div>Mon</div>
-                          <div>Tue</div>
-                          <div>Wed</div>
-                          <div>Thu</div>
-                          <div>Fri</div>
-                          <div>Sat</div>
+                        <div class="current-day-events">
+                            <div>Current Events:</div>
+                            <ul class="current-day-events-list"></ul>
                         </div>
-                        <div class="days"></div>
-                      </div>
+                        <div class="add-event-day">
+                            <input type="text" class="add-event-day-field" placeholder="Create an Event">
+                        
+                            <span class="fa fa-solid fa-circle-plus cursor-pointer add-event-day-field-btn"></span>
+                        </div>
                     </div>
+                    <div class="right-side">
+                        <div class="text-right calendar-change-year">
+                            <div class="calendar-change-year-slider">
+                                <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
+                                <span class="calendar-current-year"></span>
+                                <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
+                            </div>
+                        </div>
+                        <div class="calendar-month-list">
+                            <ul class="calendar-month"></ul>
+                        </div>
+                        <div class="calendar-week-list">
+                            <ul class="calendar-week"></ul>
+                        </div>
+                        <div class="calendar-day-list">
+                            <ul class="calendar-days"></ul>
+                        </div>
+                    </div>
+                </div>
 
                 
                 <script src="/js/script.js"></script>

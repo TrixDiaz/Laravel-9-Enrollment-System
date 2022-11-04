@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link href="/css/enroll.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/enroll.css">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -15,11 +15,9 @@
     <!--<title>Responsive Regisration Form </title>--> 
 </head>
 <body>
-</body>
-<body>
+    <div class="container">
+        <header>Registration</header>
 
-    <div class="box">
-        <header>Enrollment Form</header>
         <form action="#">
             <div class="form first">
                 <div class="details personal">
@@ -31,11 +29,10 @@
                             <input type="text" placeholder="Enter your First Name" required>
                         </div>
 
-                        
-                 <div class="input-field">
-                    <label>Last Name</label>
-                          <input type="text" placeholder="Enter your Last Name" required>
-                                </div>
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter your Last Name" required>
+                        </div>
 
                         <div class="input-field">
                             <label>Middle Name</label>
@@ -43,8 +40,8 @@
                         </div>
 
                         <div class="input-field">
-                            <label>Occupation</label>
-                            <input type="text" placeholder="Enter your Occupation" required>
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" required>
                         </div>
 
                         <div class="input-field">
@@ -58,61 +55,64 @@
                         </div>
 
                         <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
+                            <label>Occupation</label>
+                            <select required>
+                                <option disabled selected>Select Occupation</option>
+                                <option>Student</option>
+                                <option>Working</option>
+                                <option>Others</option>
+                            </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="details ID">
+                    <span class="title">For School</span>
 
                     <div class="fields">
                         <div class="input-field">
-                            <label>Email</label>
-                            <input type="text" placeholder="Enter your Email" required>
+                            <label>Date Of Birth</label>
+                            <input type="date" placeholder="Enter your Nickname" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Mobile Number</label>
-                            <input type="number" placeholder="Enter your mobile number" required>
+                            <label>AGE</label>
+                            <input type="number" placeholder="Enter Your AGE" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Religion</label>
-                            <input type="text" placeholder="Enter your Religion" required>
+                            <label>Placed Of Birth</label>
+                            <input type="text" placeholder="Enter Your Placed Of Birth" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Province</label>
-                            <input type="text" placeholder="Enter your Province" required>
+                            <label>Your Email</label>
+                            <input type="Email" placeholder="Enter your Email" required>
                         </div>
 
-                        
-                 <div class="input-field">
-                         <label>Date Of Birth</label>
-                     <input type="text" placeholder="Enter your Date Of Birth" required>
+                        <div class="input-field">
+                            <label>Your Strand</label>
+                            <select required>
+                                <option disabled selected>Select Strand</option>
+                                <option>ABM-Accountancy, Business, and Management</option>
+                                <option>STEM-Science, Technology, Engineering and Mathematics.</option>
+                                <option>GAS-General Academic Strand</option>
+                                <option>HUMSS-Humanities and Social Sciences</option>
+                                <option>TVL-Technical-Vocational-Livelihood Strand</option>
+                            
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Your Grades</label>
+                            <select required>
+                                <option disabled selected>Select Year Grades</option>
+                                <option>GRADE 11</option>
+                                <option>GRADE 12</option>
+                                
+                            </select>
+                        </div>
                     </div>
-
-                    <div class="input-field">
-                        <label>Primary Address</label>
-                    <input type="text" placeholder="Enter your Primary Address" required>
-                   </div>
-                        
 
                     <button class="nextBtn">
                         <span class="btnText">Next</span>
@@ -123,83 +123,83 @@
 
             <div class="form second">
                 <div class="details address">
-                    <span class="title">Address & School details</span>
+                    <span class="title">Permanent Address</span>
 
                     <div class="fields">
                         <div class="input-field">
-                            <label>Barangay</label>
-                            <input type="text" placeholder="Enter Barangay" required>
+                            <label>House No./Street</label>
+                            <input type="text" placeholder="Your House No." required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Street Name</label>
+                            <input type="text" placeholder="Enter Street Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Baranggay</label>
+                            <input type="text" placeholder="Enter your Baranggay" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Municipality/City</label>
+                            <input type="text" placeholder="Enter your Municipality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Province</label>
+                            <input type="text" placeholder="Enter Province" required>
                         </div>
 
                         <div class="input-field">
                             <label>Zip Code</label>
-                            <input type="text" placeholder="Enter Zipcode" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Grade</label>
-                            <select required>
-                                <option disabled selected>Select Grade</option>
-                                <option>11</option>
-                                <option>12</option>
-                              
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Strand</label>
-                            <select required>
-                                <option disabled selected>Select Strand</option>
-                                <option>GAS - General Academic Strand</option>
-                                <option>HUMSS - Humanities and Social Sciences Strand</option>
-                                <option>ABM - Accounting, Business and Management</option>
-                                <option>STEM - Science, Technology, Engineering, and Mathematics Strand</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Address</label>
-                            <input type="text" placeholder="Enter your Address" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Schoo Last Attended</label>
-                            <input type="text" placeholder="Enter your School Last Attended" required>
+                            <input type="number" placeholder="Enter Zip Code" required>
                         </div>
                     </div>
                 </div>
 
                 <div class="details family">
+                    <span class="title">Family Details</span>
 
                     <div class="fields">
                         <div class="input-field">
-                            <label>Name of Parent's</label>
-                            <input type="text" placeholder="Enter Parent's Name" required>
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter Mother Name" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Parent's Occupation</label>
-                            <input type="text" placeholder="Enter Parent's Occupation" required>
+                            <label>Occupation</label>
+                            <select required>
+                                <option disabled selected>Select Occupation</option>
+                                <option>Working</option>
+                                <option>Housewife</option>
+                                
+                            </select>
                         </div>
 
                         <div class="input-field">
-                            <label>Parent's Number</label>
-                            <input type="number" placeholder="Enter your Parent's number" required>
+                            <label>Contact Number</label>
+                            <input type="number" placeholder="Enter Contact Number" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Guardian Name</label>
-                            <input type="text" placeholder="Enter Guardian Name" required>
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter Fathers Name" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Guardian Occupation</label>
-                            <input type="text" placeholder="Enter Guardian Occupation" required>
+                            <label>Occupation</label>
+                            <select required>
+                                <option disabled selected>Select Occupation</option>
+                                <option>Working</option>
+                                <option>Housewife</option>
+                                
+                            </select>
                         </div>
 
                         <div class="input-field">
-                            <label>Guardian Number</label>
-                            <input type="number" placeholder="Enter your Guardian number" required>
+                            <label>Contact Number</label>
+                            <input type="number" placeholder="Enter Contact Number" required>
                         </div>
                     </div>
 
@@ -219,6 +219,6 @@
         </form>
     </div>
 
-    <script src="/js/enroll.js"></script>
+    <script src="/js/enroll.js"></script>-->
 </body>
 </html>

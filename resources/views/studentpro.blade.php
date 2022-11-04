@@ -69,12 +69,7 @@
                                                 <span class="text nav-text">Grades</span>
                                             </a>
                                             </li>
-                                            <li class="nav-link">
-                                                <a href="#">
-                                                    <i class='bx bxs-user-account icon' ></i>
-                                                    <span class="text nav-text">Setting</span>
-                                                </a>
-                                                </li>
+                                            
                                  
                                                 
                                                     <form action='/logout' method="POST">
@@ -112,6 +107,8 @@
                   <input type="file" id="file">
                   <label for="file" id="uploadBtn">Choose Photo</label>
                 </div>
+
+               
                 
                 <script src="app.js"></script>
                 

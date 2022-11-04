@@ -51,6 +51,8 @@ body{
 }
 
 
+
+
 .body1{
     min-height: 100vh;
     display: flex;
@@ -60,7 +62,7 @@ body{
 
 .box{
     position: relative;
-    right: -200px;
+    right: -100px;
     max-width: 1000px;
     top: 15px;
     width: 100%;
@@ -183,6 +185,8 @@ form .buttons{
 form .buttons button , .backBtn{
     margin-right: 14px;
 }
+
+
 
 @media (max-width: 750px) {
     .container form{

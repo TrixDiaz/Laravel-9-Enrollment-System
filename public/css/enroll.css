@@ -6,40 +6,52 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/images/Aesthetic-Minimalist-Wallpaper-Paper-Airplanes.png') no-repeat center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("/images/school.jpg");
 }
-
-.box{
+.container{
     position: relative;
-    max-width: 1000px;
+    max-width: 900px;
     width: 100%;
     border-radius: 6px;
     padding: 30px;
     margin: 0 15px;
-    background: transparent;
+    background-color: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-
-
-.box form{
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form{
     position: relative;
     margin-top: 16px;
-    min-height: 590px;
-    background: transparent;
+    min-height: 490px;
+    background-color: #fff;
     overflow: hidden;
 }
-.box form .form{
+.container form .form{
     position: absolute;
-    background: transparent;
+    background-color: rgb(255, 255, 255);
     transition: 0.3s ease;
 }
-.box form .form.second{
+.container form .form.second{
     opacity: 0;
     pointer-events: none;
     transform: translateX(100%);
@@ -54,7 +66,7 @@ form.secActive .form.first{
     pointer-events: none;
     transform: translateX(-100%);
 }
-.box form .title{
+.container form .title{
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
@@ -62,7 +74,7 @@ form.secActive .form.first{
     margin: 6px 0;
     color: #333;
 }
-.box form .fields{
+.container form .fields{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -101,7 +113,7 @@ form .fields .input-field{
 .input-field input[type="date"]:valid{
     color: #333;
 }
-.box form button, .backBtn{
+.container form button, .backBtn{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,19 +122,20 @@ form .fields .input-field{
     width: 100%;
     border: none;
     outline: none;
-    color: rgb(159, 80, 80);
+    color: #fff;
     border-radius: 5px;
     margin: 25px 0;
-    background-color: #40f4a6;
+    background-color: #3fe7c5;;
+    
     transition: all 0.3s linear;
     cursor: pointer;
 }
-.box form .btnText{
+.container form .btnText{
     font-size: 14px;
     font-weight: 400;
 }
 form button:hover{
-    background-color: #dcf027;
+    background-color: #57e16e;
 }
 form button i,
 form .backBtn i{

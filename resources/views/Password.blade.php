@@ -56,7 +56,7 @@
                                     </a>
                                     </li>
                                     <li class="nav-link">
-                                        <a href="#">
+                                        <a href="{{url('/studentpro')}}">
                                             <i class='bx bx-user-pin icon'></i>
                                             <span class="text nav-text">Student Profile</span>
                                         </a>
@@ -67,12 +67,7 @@
                                                 <span class="text nav-text">Grades</span>
                                             </a>
                                             </li>
-                                            <li class="nav-link">
-                                                <a href="#">
-                                                    <i class='bx bxs-user-account icon' ></i>
-                                                    <span class="text nav-text">Setting</span>
-                                                </a>
-                                                </li>
+                                           
                    
                                                     <form action='/logout' method="POST">
                                                         @csrf

@@ -35,10 +35,10 @@
             </nav>
             <h1>Contact Us</h1>
         </section>
-<!------ Course --------->
+<!------ Contact --------->
 <section class="section-contact">
     <div class="container">
-        <form>
+        <form action="https://formsubmit.co/diosdadofelicianojr00@gmail.com" method="POST">
             <div class="form-group">
                 <label for="firstname">First Name</label>
                 <input 
@@ -116,7 +116,7 @@
                 navLinks.style.right = "-200px";
             }
 
-
         </script>
+
     </body>
 </html>

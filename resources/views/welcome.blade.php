@@ -63,17 +63,12 @@
                                         </a>
                                         </li>
                                         <li class="nav-link">
-                                            <a href="#">
+                                            <a href="">
                                                 <i class='bx bxs-graduation icon' ></i>
                                                 <span class="text nav-text">Grades</span>
                                             </a>
                                             </li>
-                                            <li class="nav-link">
-                                                <a href="#">
-                                                    <i class='bx bxs-user-account icon' ></i>
-                                                    <span class="text nav-text">Setting</span>
-                                                </a>
-                                                </li>
+                                           
                                  
                                                 
                                                     <form action='/logout' method="POST">

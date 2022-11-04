@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +26,7 @@
         </div>
         
         <input type="submit" value="Login" class="submit-btn">
-        <a href="/enrollment" class="enroll">Enrollment form here!</a>
-        <a href="/register" class="enroll">.</a>
+        <a href="/register" class="enroll">For admin registration</a>
         
         </form>
         
