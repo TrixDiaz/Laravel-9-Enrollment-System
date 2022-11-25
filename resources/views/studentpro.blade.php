@@ -63,6 +63,7 @@
                                             <span class="text nav-text">Student Profile</span>
                                         </a>
                                         </li>
+                                            
                                         <li class="nav-link">
                                             <a href="#">
                                                 <i class='bx bxs-graduation icon' ></i>
@@ -104,7 +105,7 @@
                 
                 <div class="profile-pic-div">
                   <img src="/images/image.jpg" id="photo">
-                  <input type="file" id="file">
+                  <input type="file" name="image"id="photo">
                   <label for="file" id="uploadBtn">Choose Photo</label>
                 </div>
 
@@ -120,68 +121,11 @@
         <header>Instructions</header>
         <h6>1. Student application must fill out this correctly</h6>
         <h6>2. Print all the necessary information, if an item is not applicable</h6>
-        <form action="#">
+        <form action="/studentpro" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="form first">
                 <div class="details personal">
-                    <span class="title">Program information</span>
 
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Department</label>
-                            <input type="text" placeholder="Example Senior High" required>
-                        </div>
-
-                        
-                        <div class="input-field">
-                            <label>Year Level</label>
-                            <select required>
-                                <option disabled selected>Select Year Level</option>
-                                <option>Grade 11</option>
-                                <option>Grade 12</option>
-                            </select>
-                        </div>
-
-                                <div class="input-field">
-                            <label>Strand</label>
-                            <select required>
-                                <option disabled selected>Select Strand</option>
-                                <option>ABM</option>
-                                <option>STEM</option>
-                                <option>GAS</option>
-                                <option>HUMS</option>
-                                <option>TVL</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Last School Attended</label>
-                            <input type="text" placeholder="Enter your Last School" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Program 2nd choice</label>
-                            <select required>
-                                <option disabled selected>Program 2nd choice</option>
-                                <option>ABM</option>
-                                <option>STEM</option>
-                                <option>GAS</option>
-                                <option>HUMS</option>
-                                <option>TVL</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Program 3rd choice</label>
-                            <select required>
-                                <option disabled selected>Program 3rd Choice</option>
-                                <option>ABM</option>
-                                <option>STEM</option>
-                                <option>GAS</option>
-                                <option>HUMS</option>
-                                <option>TVL</option>
-                            </select>
-                        </div>
-                        
                         <div class="details personal">
                     <span class="title">Personal information</span>
                     </div>
@@ -192,96 +136,51 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Firstname</label>
-                            <input type="text" placeholder="Enter your Firstname" required>
+                            <input type="text" name="firstName"placeholder="Enter your Firstname" required>
                         </div>
 
                         
 
                         <div class="input-field">
                             <label>Lastname</label>
-                            <input type="text" placeholder="Enter your Lastname" required>
+                            <input type="text" name="lastName" placeholder="Enter your Lastname" required>
                         </div>
 
                         <div class="input-field">
                             <label>Middlename</label>
-                            <input type="text" placeholder="Enter your Middlename" required>
+                            <input type="text" name="middleName" placeholder="Enter your Middlename" required>
                         </div>
 
                         
                  <div class="input-field">
                             <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
+                            <input type="date" name="dateOfBirth"placeholder="Enter birth date" required>
                         </div>
 
                     <div class="input-field">
                         <label>Age</label>
-                    <input type="text" placeholder="Enter your Age" required>
+                    <input type="text" name="age"placeholder="Enter your Age" required>
                    </div>
 
                    <div class="input-field">
                          <label>Place of Birth</label>
-                     <input type="text" placeholder="Enter your Place Birth" required>
+                     <input type="text" name="placeOfBirth"placeholder="Enter your Place Birth" required>
                     </div>
 
                     <div class="input-field">
                             <label>Mobile Number</label>
-                            <input type="number" placeholder="Enter your mobile number" required>
+                            <input type="number" name="mobileNumber"placeholder="Enter your mobile number" required>
                         </div>
 
                         <div class="input-field">
                             <label>Tel. No.</label>
-                            <input type="number" placeholder="Enter your Tel. number" required>
+                            <input type="number" name="telephoneNumber"placeholder="Enter your Tel. number" required>
                         </div>
                         
                         <div class="input-field">
                          <label>Country Code</label>
-                     <input type="text" placeholder="Enter your country code" required>
+                     <input type="text"name="countryCode" placeholder="Enter your country code" required>
                     </div>
-
-
-                    <div class="details personal">
-                    <span class="title">Present Address</span>
-
-                    <div class="details ID">
-
-<div class="fields">
-    <div class="input-field">
-        <label>Country</label>
-        <input type="text" placeholder="Enter your Country" required>
-    </div>
-
-    
-
-    <div class="input-field">
-        <label>Region</label>
-        <input type="text" placeholder="Enter your Region" required>
-    </div>
-
-    <div class="input-field">
-        <label>Province</label>
-        <input type="text" placeholder="Enter your Province" required>
-    </div>
-                      
-    <div class="details ID">
-
-<div class="fields">
-    <div class="input-field">
-        <label>Municipality</label>
-        <input type="text" placeholder="Enter your Municipality" required>
-    </div>
-
-    
-
-    <div class="input-field">
-        <label>Complete Address</label>
-        <input type="text" placeholder="Enter your Complete Address" required>
-    </div>
-
-    <div class="input-field">
-        <label>Zip Code</label>
-        <input type="text" placeholder="Enter your Zip Code" required>
-    </div>
-
 
     <div class="details personal">
                     <span class="title">Permanent Address <Address></Address></span>
@@ -291,19 +190,19 @@
 <div class="fields">
     <div class="input-field">
         <label>Country</label>
-        <input type="text" placeholder="Enter your Country" required>
+        <input type="text" name="country" placeholder="Enter your Country" required>
     </div>
 
     
 
     <div class="input-field">
         <label>Region</label>
-        <input type="text" placeholder="Enter your Region" required>
+        <input type="text" name="region" placeholder="Enter your Region" required>
     </div>
 
     <div class="input-field">
         <label>Province</label>
-        <input type="text" placeholder="Enter your Province" required>
+        <input type="text" name="province"placeholder="Enter your Province" required>
     </div>
                       
     <div class="details ID">
@@ -311,19 +210,19 @@
 <div class="fields">
     <div class="input-field">
         <label>Municipality</label>
-        <input type="text" placeholder="Enter your Municipality" required>
+        <input type="text" name="municipality"placeholder="Enter your Municipality" required>
     </div>
 
     
 
     <div class="input-field">
         <label>Complete Address</label>
-        <input type="text" placeholder="Enter your Complete Address" required>
+        <input type="text" name="completeAddress"placeholder="Enter your Complete Address" required>
     </div>
 
     <div class="input-field">
         <label>Zip Code</label>
-        <input type="text" placeholder="Enter your Zip Code" required>
+        <input type="text" name="zipCode"placeholder="Enter your Zip Code" required>
     </div>
 
 
@@ -334,35 +233,44 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Email</label>
-                            <input type="text" placeholder="Enter Email" required>
+                            <input type="text" name="email"placeholder="Enter Email" required>
                         </div>
 
                         
                         <div class="input-field">
                             <label>Nationality</label>
-                            <select required>
+                            <select name="nationality"required>
                                 <option disabled selected>Select Nationality</option>
-                                <option>Filipino</option>
-                                <option>Others</option>
+                                <option value="Filipino">Filipino</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
 
                                 <div class="input-field">
                             <label>Civil Status</label>
-                            <select required>
+                            <select name="civilStatus"required>
                                 <option disabled selected>Select Civil Status</option>
-                                <option>Single</option>
-                                <option>Married</option>
-                                <option>Widoed</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Widoed">Widoed</option>
                                 
                             </select>
                             
                         </div>
 
-                        <button class="sumbit">
+                      
+                        <button class="submit">
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>
+                        <button class="nextBtn">
+                            <a class ="btnText" href="{{url('/Student')}}" class="btnText">EDIT</a>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+
+
+
+
                     </div>
 
                        

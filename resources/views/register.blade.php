@@ -14,7 +14,7 @@
         <form action="/store" method="POST" class="form">
         @csrf
             <img src="/images/channels4_profile.jpg" alt=''>
-            <h2>Admin Register</h2>
+            <h2>Student Register</h2>
             
             <div class="input-group">
                 <input type="text" name="name" id="name" required>

@@ -39,6 +39,10 @@ body.dark{
 }
 
 /* Sidebar */
+#main{
+    transition: margin-left .5s;
+    padding: 16px;
+}
 .sidebar{
     position: fixed;
     top: 0;
@@ -51,8 +55,21 @@ body.dark{
     z-index: 100;
 }
 
+.sidebar .dropdown-btn{
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.sidebar .dropdown-container{
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  
+}
+
 .sidebar.close{
-    width: 90px;
+  width: 90px;
+   
 }
 /* Resuable css */
 .sidebar .text{
@@ -115,6 +132,7 @@ body.dark{
 header .image-text .header-text{
     display: flex;
     flex-direction: column;
+   
 }
 
 .header-text .name{
@@ -214,6 +232,8 @@ body.dark .sidebar li a:hover .text{
 
 }
 
+
+
 .sidebar .menu-bar{
     height: 100%;
     display: flex;
@@ -306,3 +326,312 @@ body.dark .switch::before{
     width: calc(100% - 88px);
 
 }
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  margin-left:50%;
+}
+/* student table css */
+
+.head {
+    font-size: 50px;
+    
+}
+
+  #myTable {
+    border-collapse:collapse; /* Collapse borders */
+    width: 50%; /* Full-width */
+    border: 1px solid rgb(78, 77, 77); /* Add a grey border */
+    font-size: 14px;
+    margin-left: 25%;
+    height: 10%;
+    background-color: white;
+    
+    
+     /* Increase font-size */
+  }
+  
+  #myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px;
+    border:1px solid rgb(128, 126, 126);  /* Add padding */
+    
+}
+  
+  #myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid rgb(78, 77, 77);
+    
+  }
+ 
+
+/* Add Student Modal Form */
+  
+/* Full-width input fields */
+input[type=text], input[type=password], textarea[type=text], input[type=date], select.schoolLastAttendedAddress,select.gender, select.advisory, select.track, select.strand, select.enrollTo{
+    width: 90%;
+    padding: 10px 10px;
+    margin: 0px 10;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .add {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-left:2%;
+    margin-bottom: 2%;
+  }
+  
+  .add:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    background-color: red     ;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-left:8%;
+    margin-bottom: 2%;
+  }
+  .cancelbtn:hover{
+    opacity:0.8;
+  }
+
+  /* Enroll Student CSS */
+
+.enrollbtn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    margin-left:25%;
+
+}
+
+ /* Faculty CSS */
+
+ .facultybtn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    margin-left:25%;
+
+}
+.facultybtn:hover{
+  opacity: 0.8;
+}
+
+.editBtn{
+  background-color:#04AA6D;
+  color: white;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 10%;
+    
+}
+
+.deleteBtn{
+  background-color:red;
+  color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+
+.gradeandsectionbtn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-left:25%;
+}
+  
+.gradeandsectionbtn:hover{
+  opacity: 0.8;
+} 
+
+.yearbtn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  margin-left:25%;
+}
+
+.yearbtn:hover{
+  opacity: 0.8;
+} 
+  
+  .trackandstrandbtn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    margin-left:25%;
+  }
+
+  .trackandstrandbtn:hover{
+    opacity: 0.8;
+  } 
+
+
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 10px;
+    height: -50%;
+    width: 100%;
+    
+  }
+  
+  .container-footer{
+    padding: 10px;
+    height: -50%;
+    width: 100%;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+ /* .modal {
+    display:none; /* Hidden by default */
+  /*  position: fixed; /* Stay in place */
+  /*  z-index: 1; /* Sit on top */
+  /*  left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+  /*  height: 100%; /* Full height */
+    /* Enable scroll if needed */
+  /* background-color: rgb(0,0,0); /* Fallback color */
+  /*  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* }  */
+
+  /* Modal Content/Box */
+  /* .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+   /* border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  /*} 
+
+  /* Add Zoom Animation */
+    .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }  
+  
+    @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  } 
+    
+   @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }  
+
+   /* Clear floats  */
+ .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+   
+   /* Change styles for span and cancel button on extra small screens  */
+    @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+  
+  }  
+
+
+
+  /* Dropdown Enroll CSS */
+
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-left:0%;
+    
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 25%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+

@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Fascades\Hash;
 use Illuminate\Support\Fascades\View;
 use Illuminate\Validation\Rule;
-
+use App\Models\Enrollment;
+use App\Models\StudentProfile;
+use App\Models\Students;
 class UserController extends Controller
 {
     public function process(Request $request){
@@ -41,10 +43,6 @@ class UserController extends Controller
         return view('Password');
     }
 
-    public function enrollment(){
-        return view('enrollment');
-    }
-
     public function Calendar(){
         return view('Calendar');
     }
@@ -53,8 +51,42 @@ class UserController extends Controller
         return view('contact');
     }
 
+    //enrollment store function
 
+    public function enrollmentStore(Request $request){
+        
+        $enrollment = new enrollment;
 
+        $enrollment->firstName = $request->input('firstName');
+        $enrollment->lastName = $request->input('lastName');
+        $enrollment->middleName = $request->input('middleName');
+        $enrollment->mobileNumber = $request->input('mobileNumber');
+        $enrollment->gender = $request->input('gender');
+        $enrollment->studentOccupation = $request->input('studentOccupation');
+        $enrollment->dateOfBirth = $request->input('dateOfBirth');
+        $enrollment->placeOfBirth = $request->input('placeOfBirth');
+        $enrollment->age = $request->input('age');
+        $enrollment->track = $request->input('track');
+        $enrollment->grade = $request->input('grade');
+        $enrollment->houseNumber = $request->input('houseNumber');
+        $enrollment->streetName = $request->input('streetName');
+        $enrollment->baranggay = $request->input('baranggay');
+        $enrollment->city = $request->input('city');
+        $enrollment->province = $request->input('province');
+        $enrollment->zipCode = $request->input('zipCode');
+        $enrollment->motherName = $request->input('motherName');
+        $enrollment->motherContactNumber = $request->input('motherContactNumber');
+        $enrollment->motherOccupation = $request->input('motherOccupation');
+        $enrollment->fatherName = $request->input('fatherName');
+        $enrollment->fatherOccupation = $request->input('fatherOccupation');
+        $enrollment->fatherContactNumber = $request->input('fatherContactNumber');
+
+        $enrollment->save();
+        
+        return redirect('/Login');
+    }
+
+   
     public function homepage(){
         return view('homepage');    
     }
@@ -63,11 +95,80 @@ class UserController extends Controller
         return view('course');    
     }
 
-    public function studentpro(){
-        return view('studentpro');    
+    public function studentproStore(Request $request)
+    {
+        // $request->validate(
+        //     ['image'=>'image|mimes:png,jpg'],
+        // );
+
+        // $image_name = $request->image->extension();
+        // $request->image->move(public_path('photos'),$image_name);
+
+        $studentProfile = new studentprofile;
+
+        $studentProfile->image = $request->input('image');
+        $studentProfile->firstName = $request->input('firstName');
+        $studentProfile->lastName = $request->input('lastName');
+        $studentProfile->middleName = $request->input('middleName');
+        $studentProfile->dateOfBirth = $request->input('dateOfBirth');
+        $studentProfile->age = $request->input('age');
+        $studentProfile->placeOfBirth = $request->input('placeOfBirth');
+        $studentProfile->mobileNumber = $request->input('mobileNumber');
+        $studentProfile->telephoneNumber = $request->input('telephoneNumber');
+        $studentProfile->countryCode = $request->input('countryCode');
+        $studentProfile->country = $request->input('country');
+        $studentProfile->region = $request->input('region');
+        $studentProfile->province = $request->input('province');
+        $studentProfile->municipality = $request->input('municipality');
+        $studentProfile->completeAddress = $request->input('completeAddress');
+        $studentProfile->zipCode = $request->input('zipCode');
+        $studentProfile->email = $request->input('email');
+        $studentProfile->nationality = $request->input('nationality');
+        $studentProfile->civilStatus = $request->input('civilStatus');
+
+        $studentProfile->save();
+        
+        return redirect('/studentpro');
+
     }
 
+    public function studentproUpdate(Request $request, $id){
 
+        $request->validate(
+            ['image'=>'image|mimes:png,jpg'],
+        );
+
+        $image_name = $request->image->extension();
+        $request->image->move(public_path('photos'),$image_name);
+
+        
+        $studentProfile = studentprofile::find($id);
+
+
+        $studentProfile->image = $request->input('image');
+        $studentProfile->firstName = $request->input('firstName');
+        $studentProfile->lastName = $request->input('lastName');
+        $studentProfile->middleName = $request->input('middleName');
+        $studentProfile->dateOfBirth = $request->input('dateOfBirth');
+        $studentProfile->age = $request->input('age');
+        $studentProfile->placeOfBirth = $request->input('placeOfBirth');
+        $studentProfile->mobileNumber = $request->input('mobileNumber');
+        $studentProfile->telephoneNumber = $request->input('telephoneNumber');
+        $studentProfile->countryCode = $request->input('countryCode');
+        $studentProfile->country = $request->input('country');
+        $studentProfile->region = $request->input('region');
+        $studentProfile->province = $request->input('province');
+        $studentProfile->municipality = $request->input('municipality');
+        $studentProfile->completeAddress = $request->input('completeAddress');
+        $studentProfile->zipCode = $request->input('zipCode');
+        $studentProfile->email = $request->input('email');
+        $studentProfile->nationality = $request->input('nationality');
+        $studentProfile->civilStatus = $request->input('civilStatus');
+
+        $studentProfile->save();
+        
+        return redirect('/studentpro');
+    }
     
     //for login view 
     public function login(){
@@ -91,7 +192,7 @@ class UserController extends Controller
                                 //Hash::make($validated['password']);
         $validated['password'] = bcrypt($validated['password']);
     
-        $user = User::create($validated); // create a variable and call the User mo
+        $user = Students::create($validated); // create a variable and call the User mo
         auth()->login($user);
         return redirect('/Login');
 }
@@ -102,7 +203,7 @@ class UserController extends Controller
     $request->session()->invalidate();
     $request->session()->regenerateToken();
 
-    return redirect('/Login')->with('message','Log out successful');
+    return redirect('/homepage')->with('message','Log out successful');
    }
 
 }

@@ -18,7 +18,8 @@
     <div class="container">
         <header>Registration</header>
 
-        <form action="#">
+        <form action="enrollment" method="POST">
+            @csrf
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Personal Details</span>
@@ -26,41 +27,40 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>First Name</label>
-                            <input type="text" placeholder="Enter your First Name" required>
+                            <input type="text" name="firstName"  placeholder="Enter your First Name" required>
                         </div>
 
                         <div class="input-field">
                             <label>Last Name</label>
-                            <input type="text" placeholder="Enter your Last Name" required>
+                            <input type="text" name="lastName" placeholder="Enter your Last Name" required>
                         </div>
 
                         <div class="input-field">
                             <label>Middle Name</label>
-                            <input type="text" placeholder="Enter your Middle Name" required>
+                            <input type="text" name="middleName" placeholder="Enter your Middle Name" required>
                         </div>
 
                         <div class="input-field">
                             <label>Mobile Number</label>
-                            <input type="number" placeholder="Enter mobile number" required>
+                            <input type="number" name="mobileNumber"placeholder="Enter Mobile Number" required>
                         </div>
 
                         <div class="input-field">
                             <label>Gender</label>
-                            <select required>
-                                <option disabled selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Others</option>
+                            <select name="gender"required>
+                                <option disabled selected>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Occupation</label>
-                            <select required>
+                            <select name="studentOccupation"required>
                                 <option disabled selected>Select Occupation</option>
-                                <option>Student</option>
-                                <option>Working</option>
-                                <option>Others</option>
+                                <option value="Student">Student</option>
+                                <option value="Working">Working</option>
+                                <option value="N/A">N/A</option>
                             </select>
                         </div>
                     </div>
@@ -72,43 +72,43 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Date Of Birth</label>
-                            <input type="date" placeholder="Enter your Nickname" required>
+                            <input type="date" name="dateOfBirth"required>
                         </div>
 
                         <div class="input-field">
                             <label>AGE</label>
-                            <input type="number" placeholder="Enter Your AGE" required>
+                            <input type="number" name="age" placeholder="Enter Your Age" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Placed Of Birth</label>
-                            <input type="text" placeholder="Enter Your Placed Of Birth" required>
+                            <label>Place Of Birth</label>
+                            <input type="text" name="placeOfBirth" placeholder="Enter Your Placed Of Birth" required>
                         </div>
 
                         <div class="input-field">
                             <label>Your Email</label>
-                            <input type="Email" placeholder="Enter your Email" required>
+                            <input type="Email" name="email"placeholder="Enter your Email" required>
                         </div>
 
                         <div class="input-field">
-                            <label>Your Strand</label>
-                            <select required>
-                                <option disabled selected>Select Strand</option>
-                                <option>ABM-Accountancy, Business, and Management</option>
-                                <option>STEM-Science, Technology, Engineering and Mathematics.</option>
-                                <option>GAS-General Academic Strand</option>
-                                <option>HUMSS-Humanities and Social Sciences</option>
-                                <option>TVL-Technical-Vocational-Livelihood Strand</option>
+                            <label>Your Track</label>
+                            <select name="track"required>
+                                <option disabled selected>Select Track</option>
+                                <option value="ABM">ABM-Accountancy, Business, and Management</option>
+                                <option value="STEM">STEM-Science, Technology, Engineering and Mathematics.</option>
+                                <option value="GAS">GAS-General Academic Strand</option>
+                                <option value="HUMSS">HUMSS-Humanities and Social Sciences</option>
+                                <option value="TVL">TVL-Technical-Vocational-Livelihood Strand</option>
                             
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Your Grades</label>
-                            <select required>
+                            <select name="grade"required>
                                 <option disabled selected>Select Year Grades</option>
-                                <option>GRADE 11</option>
-                                <option>GRADE 12</option>
+                                <option value="Grade 11">GRADE 11</option>
+                                <option value="Grade 12">GRADE 12</option>
                                 
                             </select>
                         </div>
@@ -128,32 +128,32 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>House No./Street</label>
-                            <input type="text" placeholder="Your House No." required>
+                            <input type="text" name="houseNumber"placeholder="Your House No." required>
                         </div>
 
                         <div class="input-field">
                             <label>Street Name</label>
-                            <input type="text" placeholder="Enter Street Name" required>
+                            <input type="text" name="streetName"placeholder="Enter Street Name" required>
                         </div>
 
                         <div class="input-field">
                             <label>Baranggay</label>
-                            <input type="text" placeholder="Enter your Baranggay" required>
+                            <input type="text" name="baranggay"placeholder="Enter your Baranggay" required>
                         </div>
 
                         <div class="input-field">
                             <label>Municipality/City</label>
-                            <input type="text" placeholder="Enter your Municipality" required>
+                            <input type="text" name="city"placeholder="Enter your Municipality" required>
                         </div>
 
                         <div class="input-field">
                             <label>Province</label>
-                            <input type="text" placeholder="Enter Province" required>
+                            <input type="text" name="province"placeholder="Enter Province" required>
                         </div>
 
                         <div class="input-field">
                             <label>Zip Code</label>
-                            <input type="number" placeholder="Enter Zip Code" required>
+                            <input type="text" name="zipCode"placeholder="Enter Zip Code" required>
                         </div>
                     </div>
                 </div>
@@ -164,42 +164,42 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Mother Name</label>
-                            <input type="text" placeholder="Enter Mother Name" required>
+                            <input type="text" name="motherName"placeholder="Enter Mother Name" required>
                         </div>
 
                         <div class="input-field">
                             <label>Occupation</label>
-                            <select required>
+                            <select name="motherOccupation"required>
                                 <option disabled selected>Select Occupation</option>
-                                <option>Working</option>
-                                <option>Housewife</option>
+                                <option value="Working">Working</option>
+                                <option value="Housewife">Housewife</option>
                                 
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Contact Number</label>
-                            <input type="number" placeholder="Enter Contact Number" required>
+                            <input type="text" name="motherContactNumber"placeholder="Enter Contact Number" required>
                         </div>
 
                         <div class="input-field">
                             <label>Father Name</label>
-                            <input type="text" placeholder="Enter Fathers Name" required>
+                            <input type="text" name="fatherName"placeholder="Enter Fathers Name" required>
                         </div>
 
                         <div class="input-field">
                             <label>Occupation</label>
-                            <select required>
+                            <select name="fatherOccupation"required>
                                 <option disabled selected>Select Occupation</option>
-                                <option>Working</option>
-                                <option>Housewife</option>
+                                <option value="Working">Working</option>
+                                <option value="Housewife">Housewife</option>
                                 
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Contact Number</label>
-                            <input type="number" placeholder="Enter Contact Number" required>
+                            <input type="text" name="fatherContactNumber"placeholder="Enter Contact Number" required>
                         </div>
                     </div>
 
@@ -209,7 +209,7 @@
                             <span class="btnText">Back</span>
                         </div>
                         
-                        <button class="sumbit">
+                        <button type="submit" class="submit">
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>

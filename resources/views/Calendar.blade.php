@@ -61,7 +61,7 @@
                                             </a>
                                             </li>
                                             <li class="nav-link">
-                                                <a href="{{('/studentpro')}}">
+                                                <a href="{{('/Student')}}">
                                                     <i class='bx bx-user-pin icon'></i>
                                                     <span class="text nav-text">Student Profile</span>
                                                 </a>

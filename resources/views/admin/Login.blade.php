@@ -7,14 +7,14 @@
 
     <!--css-->
     <link href="/css/Login.css" rel="stylesheet">
-    <title>Student Login Form</title>
+    <title>Admin Login Form</title>
 </head>
 <body>
     <div class="login-wrapper">
-        <form action="/login/process" method="POST" class = "form">
+        <form action="/admin/login/process" method="POST" class="form">
             @csrf
             <img src="/images/channels4_profile.jpg" alt=''>
-            <h2>User Login</h2>
+            <h2>Admin Login</h2>
             <div class="input-group">
                 <input type="email" name="email" id="email" required>
                 <label for="loginUser">Email</label>
@@ -26,21 +26,8 @@
         </div>
         
         <input type="submit" value="Login" class="submit-btn">
-        <a href="/enrollment" class="enroll">For student registration</a>
-        <p class = "text-gray-300 pt-2"> Switch to <a href="/admin/Login" class="enroll">Admin</a></p>
-        </form>
-        
-
-        
-        <div id="enroll">
-            <form action="" class="form">
-                <a href="#" class="close">&times;</a>
-                <h2>Enroll</h2>
-                <div class="input-group">
-                   
-                </div>
-
-        
+        <a href="/admin/register" class="enroll">For admin registration</a>
+        <p class = "text-gray-300 pt-2"> Switch to <a href="/Login" class="enroll">Student</a></p>
             </form>
         </div>
     </div>

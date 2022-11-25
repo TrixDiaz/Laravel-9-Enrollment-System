@@ -1,0 +1,43 @@
+/* student table css */
+
+.head {
+  font-size: 50px;
+}
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position:0%;/* Position the search icon */
+  background-repeat: no-repeat;
+  background-size:3%; /* Do not repeat the icon image */
+  width: 25%; /* Full-width */
+  font-size: 14px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 3px solid rgb(128, 126, 126); /* Add a grey border */
+  margin-bottom: 12px;
+  margin-left: 50%;
+  border-radius: 4px;
+   /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse:collapse; /* Collapse borders */
+  width: 50%; /* Full-width */
+  border: 1px solid rgb(78, 77, 77); /* Add a grey border */
+  font-size: 14px;
+  margin-left: 25%;
+  height: 10%;
+  
+
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px;
+  border:1px solid rgb(128, 126, 126);  /* Add padding */
+  
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid rgb(78, 77, 77);
+  
+}
