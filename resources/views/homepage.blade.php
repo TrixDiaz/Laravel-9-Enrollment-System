@@ -76,7 +76,7 @@
         <div class="Amlac" style="max-width:600px">
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            {{-- <div class="col-lg-4 col-md-6">
                 <div class="box-wrap1">
                     <div class="icon">
                         <i class="fas fa-duotone fa-calculator blue-clr-bg"></i>
@@ -87,9 +87,9 @@
                     This Senior High School strand will introduce you to the fundamentals of business, accounting, marketing, and economics.
                     It will also provide you knowledge and skills in line with the digital.</p>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
+            {{-- <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
                 <div class="box-wrap1">
                     <div class="icon">
                         <i class="fas fa-sharp fa-solid fa-gears primary-clr-bg"></i>
@@ -103,18 +103,18 @@
                         collaboration skills.</p>
                     
                 </div>
-            </div>
+            </div> --}}
             <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
                 <div class="box-wrap1">
                     <div class="icon">
                         <i class="fas fa-sharp fa-solid fa-user-graduate green-clr-bg"></i>
                         
                     </div>
-                    <h4 class="number">C</h4>
-                    <h4><a href="#url">GAS</a></h4>
-                    <p> General Academic Strand. Through the GAS, senior high school
-                         students are given exposure to different courses so they can 
-                         make a more informed decision about their future career path.</p>
+                    <h4 class="number">A</h4>
+                    <h4><a href="#url">TVL-ICT-Animation</a></h4>
+                    <p> TVL Strand is designed to develop students' skills that is useful for livelihood and technical projects. 
+                        It provides a curriculum that is a combination of Core Courses and specialized hands-on courses that meets the 
+                        competency-based assessment of TESDA.</p>
                    
                 </div>
             </div>
@@ -124,8 +124,8 @@
                         <i class="fas fa-sharp fa-solid fa-users-between-lines primary-clr-bg"></i>
                         
                     </div>
-                    <h4 class="number">D</h4>
-                    <h4><a href="#url">HUMS</a></h4>
+                    <h4 class="number">B</h4>
+                    <h4><a href="#url">Academic-HUMSS</a></h4>
                     <p>The Humanities and Social Sciences (HUMSS) strands equip students with a wide range of discipline 
                         with the use of their experiences and skills into the investigation and inquiry of human situations 
                         by studying its behavior and social changes using empirical, analytical, and critical method techniques.</p>
@@ -137,8 +137,8 @@
                     <div class="icon">
                         <i class="fas fa-user-cog green-clr-bg"></i>
                     </div>
-                    <h4 class="number">E</h4>
-                    <h4><a href="#url">TVL</a></h4>
+                    <h4 class="number">C</h4>
+                    <h4><a href="#url">TVL-Industrial Arts</a></h4>
                     <p>TVL Strand is designed to develop students' skills that is useful for livelihood and technical projects. 
                         It provides a curriculum that is a combination of Core Courses and specialized hands-on courses that meets the 
                         competency-based assessment of TESDA.</p>

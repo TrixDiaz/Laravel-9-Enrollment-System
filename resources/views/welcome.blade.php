@@ -36,12 +36,12 @@
                         <span class="text nav-text">Dashboard</span>
                     </a>
                     </li>
-                    <li class="nav-link">
+                    {{-- <li class="nav-link">
                         <a href="{{('/Password')}}">
                             <i class='bx bx-lock icon' ></i>
                             <span class="text nav-text">Password</span>
                         </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-link">
                             <a href="{{('/Calendar')}}">
                                 <i class='bx bx-calendar icon'></i>
@@ -50,24 +50,24 @@
                             </li>
                          
 
-                                <li class="nav-link">
+                                {{-- <li class="nav-link">
                                     <a href="#">
                                         <i class='bx bx-registered icon' ></i>
                                         <span class="text nav-text">Registration</span>
                                     </a>
-                                    </li>
+                                    </li> --}}
                                     <li class="nav-link">
                                         <a href="{{('/studentpro')}}">
                                             <i class='bx bx-user-pin icon'></i>
                                             <span class="text nav-text">Student Profile</span>
                                         </a>
                                         </li>
-                                        <li class="nav-link">
+                                        {{-- <li class="nav-link">
                                             <a href="">
                                                 <i class='bx bxs-graduation icon' ></i>
                                                 <span class="text nav-text">Grades</span>
                                             </a>
-                                            </li>
+                                            </li> --}}
                                            
                                  
                                                 

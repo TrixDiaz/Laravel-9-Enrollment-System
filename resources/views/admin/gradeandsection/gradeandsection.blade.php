@@ -134,6 +134,11 @@
                 @endforeach
             </select><br>
               </div>
+
+              <div class="form-group">
+                <label>Subject ID</label>
+                <input type="text" name ="subjectID" id ="subjectID" class="form-control" value="" placeholder="" readonly>
+              </div>
               
                 
         </div>

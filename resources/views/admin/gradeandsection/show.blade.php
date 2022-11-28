@@ -30,7 +30,7 @@
         <div class="form-group">
 
             <label>Student ID</label>
-            <input type="text" name ="studentID" id="studentID" class="form-control"  placeholder="">
+            <input type="text" id="searchID" class="form-control"  placeholder="">
 
             {{-- <select name="studentID" id="searchID" class="form-control">
             <option selected disabled>Student ID</option> --}}
@@ -40,78 +40,88 @@
             {{-- </select> --}}
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <div class="form-group">
             <label>First Name</label>
-            <input type="text" name ="firstName" id="firstName" class="form-control"  placeholder="First Name" readonly>
+            <input type="text" name ="firstName" id="firstName" class="form-control" readonly>
           </div>
         </div>
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Middle Name</label>
-                <input type="text" name ="middleName" id="middleName" class="form-control"  placeholder="Middle Name" readonly>
+                <input type="text" name ="middleName" id="middleName" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" name ="lastName" id="lastName" class="form-control"  placeholder="Last Name" readonly>
+                <input type="text" name ="lastName" id="lastName" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Gender</label>
-                <input type="text" name ="gender" id="gender" class="form-control"  placeholder="Gender" readonly>
+                <input type="text" name ="gender" id="gender" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Date Of Birth</label>
-                <input type="text" name ="dateOfBirth" id="dateOfBirth" class="form-control"  placeholder="Date Of Birth" readonly>
+                <input type="text" name ="dateOfBirth" id="dateOfBirth" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Address</label>
-                <input type="text" name ="address" id="address" class="form-control"  placeholder="Address" readonly>
+                <input type="text" name ="address" id="address" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Track and Strand</label>
-                <input type="text" name ="strandID" id="address" class="form-control"  placeholder="Address" readonly>
+                <input type="text" name ="strandID" id="address" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>School Last Attended</label>
-                <input type="text" name ="schoolLastAttended" id="schoolLastAttended" class="form-control"  placeholder="School Last Attended" readonly>
+                <input type="text" name ="schoolLastAttended" id="schoolLastAttended" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
-                <label>Email</label>
-                <input type="text" name ="email" id="email" class="form-control"  placeholder="Email" readonly>
+                <label>Student Email</label>
+                <input type="text" name ="email" id="email" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Password</label>
-                <input type="text" name ="password" id="password" class="form-control"  placeholder="Password" readonly>
+                <input type="text" name ="password" id="password" class="form-control" readonly>
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Section</label>
-                <input type="text" name ="section" id="section" class="form-control"  placeholder="Section" readonly>
+                @foreach($gradeandsections as $class)
+                <input type="text" name ="section" id="section" class="form-control"  value="{{ $class->sectionID }}" readonly>
+               
               </div>
             </div>  
-        <div class="col-4">   
+        <div class="col-6">   
             <div class="form-group">
                 <label>Subject</label>
-                <input type="text" name ="subject" id="subject" class="form-control"  placeholder="Subject" readonly>
+                <input type="text" name ="subject" id="subject" class="form-control"  value="{{ $class->subject }}"readonly>
+                @endforeach
               </div>
             </div>  
+        <div class="col-12">   
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" name ="studentID" id="studentID" class="form-control" readonly>
+              </div>
+            </div>  
+              
               
               
     </div>
@@ -146,15 +156,12 @@
                 </div>
                 @endif
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                + Add Student
-              </button>
               <br><br>
               
         <table class="table table-striped" id="datatable">
     <thead>
         <tr>
-        <th scope="col">ID</th>
+        {{-- <th scope="col">ID</th> --}}
         <th scope="col">Student ID</th>
         <th scope="col">First Name</th> 
         <th scope="col">Middle Name</th> 
@@ -171,10 +178,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($classes as $class)
+        @foreach($students as $class)
         <tr> 
 
-            <td>{{ $class->id }}</td>
+            {{-- <td>{{ $class->id }}</td> --}}
             <td>{{ $class->studentID }}</td>
             <td>{{ $class->firstName }}</td>
             <td>{{ $class->middleName }}</td>
@@ -186,10 +193,12 @@
             <td>{{ $class->schoolLastAttended }}</td>
             <td>{{ $class->email }}</td>
             <td>{{ $class->password }}</td>
-            <td>{{ $class->section }}</td>
+            <td>{{ $class->sectionID }}</td>
+            @foreach($gradeandsections as $class)
             <td>{{ $class->subject }}</td>
+            @endforeach
       </tr>
-      @endforeach        
+      @endforeach       
     </div>
 </div>
 </body>
@@ -207,13 +216,95 @@
     
     $.ajax({
             type:'get',
-            url:'{!!URL::to('/admin/gradeandsection/filterdatas/')!!}',
+            url:'{!!URL::to('/admin/gradeandsection/filterdatas')!!}',
             success:function(response){ 
-              console.log(response)
-                                }})
+              console.log(response);
+
+
+                                //     var studArray = response;
+                                //     var dataStud = {};
+                                //     var dataStud2 = {};
+                                //     var dataStud3 = {};
+                                //     var dataStud4 = {};
+                                //     var dataStud5 = {};
+                                //     var dataStud6 = {};
+                                //     var dataStud7 = {};
+                                //     var dataStud8 = {};
+                                //     var dataStud9 = {};
+                                //     var dataStud10 = {};
+                                //     var dataStud11 = {};
+                                //   for (var i= 0; i < studArray.length; i++){
+                                //         dataStud[studArray[i].studentID] = null; 
+                                //         dataStud2[studArray[i].studentID] = studArray[i];
+                                //         dataStud3[studArray[i].studentID] = studArray[i];
+                                //         dataStud4[studArray[i].studentID] = studArray[i];
+                                //         dataStud5[studArray[i].studentID] = studArray[i];
+                                //         dataStud6[studArray[i].studentID] = studArray[i];
+                                //         dataStud7[studArray[i].studentID] = studArray[i];
+                                //         dataStud8[studArray[i].studentID] = studArray[i];
+                                //         dataStud9[studArray[i].studentID] = studArray[i];
+                                //         dataStud10[studArray[i].studentID] = studArray[i];
+                                //         dataStud11[studArray[i].studentID] = studArray[i];
+                                //     }
+                                //     for (var i= 0; i < studArray.length; i++){
+                                //         dataStud[studArray[i].firstName] = null; 
+                                //         dataStud2[studArray[i].firstName] = studArray[i];
+                                //         dataStud3[studArray[i].firstName] = studArray[i];
+                                //         dataStud4[studArray[i].firstName] = studArray[i];
+                                //         dataStud5[studArray[i].firstName] = studArray[i];
+                                //         dataStud6[studArray[i].firstName] = studArray[i];
+                                //         dataStud7[studArray[i].firstName] = studArray[i];
+                                //         dataStud8[studArray[i].firstName] = studArray[i];
+                                //         dataStud9[studArray[i].firstName] = studArray[i];
+                                //         dataStud10[studArray[i].firstName] = studArray[i];
+                                //         dataStud11[studArray[i].firstName] = studArray[i];
+                                //     }
+                                //     for (var i= 0; i < studArray.length; i++){
+                                //         dataStud[studArray[i].lastName] = null; 
+                                //         dataStud2[studArray[i].lastName] = studArray[i];
+                                //         dataStud3[studArray[i].lastName] = studArray[i];
+                                //         dataStud4[studArray[i].lastName] = studArray[i];
+                                //         dataStud5[studArray[i].lastName] = studArray[i];
+                                //         dataStud6[studArray[i].lastName] = studArray[i];
+                                //         dataStud7[studArray[i].lastName] = studArray[i];
+                                //         dataStud8[studArray[i].lastName] = studArray[i];
+                                //         dataStud9[studArray[i].lastName] = studArray[i];
+                                //         dataStud10[studArray[i].lastName] = studArray[i];
+                                //         dataStud11[studArray[i].lastName] = studArray[i];
+                                //     }
+                                //     console.log("dataStud11");
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+                                //     console.log(dataStud11);
+
+                                //     $('input#searchID').autocomplete({
+                                //     data: dataStud,
+                                //     onAutocomplete:function(reqdata){
+                                //         console.log(reqdata);
+                                //         $('#firstName').val(dataStud2[reqdata]['firstName']);
+                                //         $('#middleName').val(dataStud2[reqdata]['middleName']);
+                                //         $('#lastName').val(dataStud2[reqdata]['lastName']);
+                                //         $('#gender').val(dataStud2[reqdata]['gender']);
+                                //         $('#dateOfBirth').val(dataStud2[reqdata]['dateOfBirth']);
+                                //         $('#address').val(dataStud2[reqdata]['address']);
+                                //         $('#strandID').val(dataStud2[reqdata]['strandID']);
+                                //         $('#schoolLastAttended').val(dataStud2[reqdata]['schoolLastAttended']);
+                                //         $('#email').val(dataStud2[reqdata]['email']);
+                                //         $('#password').val(dataStud2[reqdata]['password']);
+                                //         $('#studentID').val(dataStud2[reqdata]['studentID']);
+                                //     }
+                                // });
+                                  
+                                  }})
+
   });
-
-
 
 </script>
 </body>

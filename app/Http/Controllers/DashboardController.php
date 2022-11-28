@@ -8,6 +8,7 @@ use App\Models\Students;
 use App\Models\GradeAndSection;
 use App\Models\TrackAndStrand;
 use App\Models\Faculties;
+use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
@@ -18,20 +19,23 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.admindashboard');
-    }
-
-    public function number()
-    {
-        $dep = departments::all();
-        $stud = students::all();
-        $gandsec = gradeandsection::all();
+        $dep = departments::count();
+        $stud = students::count();
+        $gandsec = gradeandsection::count();
         $tands = trackandstrand::all();
-        $fac = faculties::all();
+        $fac = faculties::count();
 
-        return view('admin.admindashboard', ['departments'=>$dep],['students'=>$stud]+['gradeandsection'=>$gandsec]+['trackandstrand'=>$tands]+['faculties'=>$fac]);
-
+        return view('admin.admindashboard', compact('dep', 'stud', 'gandsec', 'tands','fac'));
+        // return view('admin.admindashboard', ['departments'=>$dep],['students'=>$stud]+['gradeandsection'=>$gandsec]+['trackandstrand'=>$tands]+['faculties'=>$fac]);
     }
+
+    // public function Department() {
+
+    //     return view('admin.departments.department');
+
+    // }
+
+  
     /**
      * Show the form for creating a new resource.
      *

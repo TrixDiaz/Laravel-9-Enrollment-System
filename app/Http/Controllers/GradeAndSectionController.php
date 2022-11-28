@@ -29,6 +29,8 @@ class GradeAndSectionController extends Controller
         // return view('admin.gradeandsection.gradeandsection')->with('gradeandsections', $gandsec);
     }
 
+    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -54,6 +56,7 @@ class GradeAndSectionController extends Controller
             'gradeLevel' => 'required',
             'faculty' => 'required',
             'subject' => 'required',
+            
             
         ]);
 
@@ -89,13 +92,20 @@ class GradeAndSectionController extends Controller
         // ->get();
         
         $gradeandsection = GradeAndSection::find($id);
-        
-        // $gradeandsection = gradeandsection::all();
+        $stud = DB::table('students')
+        ->where('sectionID','=',$id)
+        ->get();
+
+        $gradeandsection = gradeandsection::all();
         $class = DB::table('classes')
         ->where('section','=',$id)
-        ->get();        
+        ->get(); 
+        
+        $gradeandsection = DB::table('grade_and_sections')
+        ->where('sectionID','=',$id)
+        ->get();
         // $stud = students::find($);        
-        return view ('admin.gradeandsection.show',['gradeandsections'=>$gradeandsection]+['classes'=>$class]);
+        return view ('admin.gradeandsection.show',['gradeandsections'=>$gradeandsection]+['classes'=>$class]+['students'=>$stud]);
         // $gandsec = gradeandsection::find($id);
         // return view('admin.gradeandsection.join',['grade_and_sections'=>$sectionID]);
         // return view('admin.gradeandsection.show',['gradeandsection'=>$gandsec]+['students'=>$stud]);
@@ -121,6 +131,7 @@ class GradeAndSectionController extends Controller
      public function test($id) {
               $gandsec = gradeandsection::findorFail($id);
               $cla = classes::all();
+             
               return view('admin.gradeandsection.show',['gradeandsections'=>$gandsec]+['classes'=>$cla]);
          }
 

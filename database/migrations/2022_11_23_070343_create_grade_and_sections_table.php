@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('gradeLevel');
             $table->string('faculty');
             $table->string('subject');
+            $table->string('subjectID');
             $table->timestamps();
         });
     }

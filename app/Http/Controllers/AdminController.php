@@ -41,12 +41,12 @@ class AdminController extends Controller
     public function store(Request $request){
         $validated = $request->validate([
             "name"=>['required','min:4'],
-            "email"=>['required','email',Rule::unique('admin_account','email')],
+            "email"=>['required','email',Rule::unique('admins','email')],
             "password" => 'required|confirmed|min:6'
     
         ]);
                                 //Hash::make($validated['password']);
-        $validated['password'] = bcrypt($validated['password']);
+        // $validated['password'] = bcrypt($validated['password']);
     
         $admin = Admin::create($validated); // create a variable and call the User mo
         auth()->login($admin);

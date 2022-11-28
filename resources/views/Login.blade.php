@@ -26,7 +26,7 @@
         </div>
         
         <input type="submit" value="Login" class="submit-btn">
-        <a href="/enrollment" class="enroll">For student registration</a>
+        <a href="/register" class="enroll">For student registration</a>
         <p class = "text-gray-300 pt-2"> Switch to <a href="/admin/Login" class="enroll">Admin</a></p>
         </form>
         

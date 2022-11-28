@@ -42,7 +42,6 @@
         <div id = topnav class="topnav">
             <a href="/admin/admindashboard" class ="logo"><b>Amlac Senior High School</a></b>
             <div class = "topnav-links">
-              
              </div>
            </div>
     

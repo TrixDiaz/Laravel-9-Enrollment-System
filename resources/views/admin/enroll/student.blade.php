@@ -95,6 +95,17 @@
                 </div>
                 <div class="col-6">
                   <div class="form-group">
+                    <label>Section </label>
+                    <select name="sectionID" class="form-control" >
+                    <option value =""selected disabled>Section</option>
+                    @foreach ( $gradeandsections as $stud )
+                    <option value="{{ $stud->sectionID }}">{{ $stud->sectionID }}</option>
+                      @endforeach
+                  </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
                     <label>School Last Attended</b></label>
                     <input type="text" placeholder="School Last Attended" name="schoolLastAttended" class="form-control" required>
                   </div>
@@ -270,6 +281,17 @@
             </div>
             <div class="col-6">
               <div class="form-group">
+                <label>Section </label>
+                <select name="sectionID" id="sectionID" class="form-control" >
+                <option value =""selected disabled>Section</option>
+                @foreach ( $gradeandsections as $stud )
+                <option value="{{ $stud->sectionID }}">{{ $stud->sectionID }}</option>
+                  @endforeach
+              </select>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
                 <label>School Last Attended</b></label>
                 <input type="text" id = "schoolLastAttended" placeholder="School Last Attended" name="schoolLastAttended" class="form-control" required>
               </div>
@@ -340,6 +362,7 @@
             <th scope="col">Date Of Birth</th>
             <th scope="col">Address</th>
             <th scope="col">Track and Strand</th>
+            <th scope="col">Section</th>
             <th scope="col">School Last Attended</th>
             <th scope="col">Student Email</th>
             <th scope="col">Student Password</th>
@@ -358,6 +381,7 @@
               <td>{{ $student->address}} </td>
               {{-- <td>{{ $student->section}} </td> --}}
               <td>{{ $student->strandID}} </td>
+              <td>{{ $student->sectionID}} </td>
               <td>{{ $student->schoolLastAttended}} </td>
               <td>{{ $student->email}} </td>
               <td>{{ $student->password}} </td>
@@ -403,9 +427,10 @@ $('#gender').val(data[4]);
 $('#dateOfBirth').val(data[5]);
 $('#address').val(data[6]);
 $('#strandID').val(data[7]);
-$('#schoolLastAttended').val(data[8]);
-$('#email').val(data[9]);
-$('#password').val(data[10]);
+$('#sectionID').val(data[8]);
+$('#schoolLastAttended').val(data[9]);
+$('#email').val(data[10]);
+$('#password').val(data[11]);
 // $('#section').val(data[7]);
 
 // $('#schoolLastAttendedAddress').val(data[10]);

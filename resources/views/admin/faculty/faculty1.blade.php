@@ -227,9 +227,11 @@
         <td>{{ $faculty->department}} </td>
         {{-- <td>{{ $faculty->section}} </td>    --}}
         <td>
-          <a href="/admin/faculty/show" class="btn btn-primary view"> VIEW </a>
+          
+          {{-- <a href="/admin/faculty/show" class="btn btn-primary view"> VIEW </a> --}}
           <a href="#" class="btn btn-success edit"> EDIT</a>
         
+        </td>
       </tr>
     @endforeach
   </tbody>

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('dateOfBirth');
             $table->string('address');
             $table->string('strandID');
+            $table->string('sectionID');
             $table->string('schoolLastAttended');
             $table->string('email')->unique();
             $table->string('password');

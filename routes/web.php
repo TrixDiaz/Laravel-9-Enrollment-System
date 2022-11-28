@@ -10,6 +10,7 @@ use App\Http\Controllers\GradeAndSectionController;
 use App\Http\Controllers\TrackAndStrandController;
 use App\Http\Controllers\SchoolYearController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DashboardController;
 /*
 /*
 |--------------------------------------------------------------------------
@@ -54,10 +55,10 @@ Route::post('/enrollment', [UserController::class,'enrollmentStore']);
 
 Route::get('/Calendar', [UserController::class, 'Calendar']);
 
-Route::get('/Student', [UserController::class, 'studentproUpdate']);
+// Route::get('/Student', [UserController::class, 'studentproUpdate']);
 
-Route::view('/studentpro', 'studentpro');
-Route::post('/studentpro', [UserController::class, 'studentproStore']);
+// Route::view('/studentpro', 'studentpro');
+// Route::post('/studentpro', [UserController::class, 'studentproStore']);
 
 Route::get('/about', [UserController::class, 'about']);
 
@@ -107,10 +108,11 @@ Route::resource('/admin/faculty', FacultyController::class);
 
 Route::resource('/admin/gradeandsection', GradeAndSectionController::class);
 Route::get('/admin/gradeandsection/show/{id}', [GradeAndSectionController::class,'show']);
-Route::get('/admin/gradeandsection/filterdatas', [GradeAndSectionController::class,'getStudent']);
-Route::post('/admin/gradeandsection/filterdata/', [GradeAndSectionController::class,'filtercreate']);
-Route::get('/admin/gradeandsection/filterdata', [GradeAndSectionController::class,'filtercreate']);
-Route::get('/admin/gradeandsection/filterdata/{id}', [GradeAndSectionController::class,'test']);
+
+// Route::get('/admin/gradeandsection/filterdatas', [GradeAndSectionController::class,'getStudent']);
+// Route::post('/admin/gradeandsection/filterdata', [GradeAndSectionController::class,'filtercreate']);
+// Route::get('/admin/gradeandsection/filterdata', [GradeAndSectionController::class,'filtercreate']);
+// Route::get('/admin/gradeandsection/filterdata/{id}', [GradeAndSectionController::class,'test']);
 
 //Track And Strand Controller
 
@@ -123,3 +125,9 @@ Route::resource('/admin/schoolyear', SchoolYearController::class);
 
 //Department Controller
 Route::resource('/admin/departments', DepartmentController::class);
+
+//Dashboard Controller
+
+Route::resource('/admin/', DashboardController::class);
+// Route::get('/admin/Department', [DashboardController::class, 'Department']); 
+    
