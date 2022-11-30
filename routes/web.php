@@ -11,6 +11,7 @@ use App\Http\Controllers\TrackAndStrandController;
 use App\Http\Controllers\SchoolYearController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ClasslistController;
 /*
 /*
 |--------------------------------------------------------------------------
@@ -131,3 +132,5 @@ Route::resource('/admin/departments', DepartmentController::class);
 Route::resource('/admin/', DashboardController::class);
 // Route::get('/admin/Department', [DashboardController::class, 'Department']); 
     
+//Classes COntroller
+Route::resource('/admin/classlist', ClasslistController::class);

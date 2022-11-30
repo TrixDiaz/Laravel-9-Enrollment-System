@@ -25,7 +25,7 @@
     <div class="card-body">
 
       <h5 class="card-title">Total Departments</h5>
-      <p>{{$dep}}</p>
+      
       <br>
       <a href="/admin/departments" class="btn btn-primary">Go somewhere</a>
     </div>

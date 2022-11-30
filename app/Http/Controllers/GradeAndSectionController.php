@@ -81,6 +81,7 @@ class GradeAndSectionController extends Controller
      */
     public function show($id)
     {
+         $data = Students::all();
 
         // $data = DB::table('students')->find(section);
         
@@ -105,7 +106,7 @@ class GradeAndSectionController extends Controller
         ->where('sectionID','=',$id)
         ->get();
         // $stud = students::find($);        
-        return view ('admin.gradeandsection.show',['gradeandsections'=>$gradeandsection]+['classes'=>$class]+['students'=>$stud]);
+        return view ('admin.gradeandsection.show',['gradeandsections'=>$gradeandsection]+['classes'=>$class]+['students'=>$stud]+['students'=>$data]);
         // $gandsec = gradeandsection::find($id);
         // return view('admin.gradeandsection.join',['grade_and_sections'=>$sectionID]);
         // return view('admin.gradeandsection.show',['gradeandsection'=>$gandsec]+['students'=>$stud]);

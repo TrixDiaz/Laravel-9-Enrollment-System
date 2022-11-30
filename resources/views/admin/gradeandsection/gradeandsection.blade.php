@@ -62,7 +62,7 @@
           <select name="faculty" id="faculty" class="form-control">
           <option selected disabled>Faculty Assigned</option>
           @foreach( $faculties as $gandsec)  
-          <option value="{{ $gandsec->id }} | {{ $gandsec->firstName }} {{ $gandsec->lastName }} ">{{ $gandsec->id }} | {{ $gandsec->firstName }} {{ $gandsec->lastName }} </option>
+          <option value="{{ $gandsec->facultyID }} | {{ $gandsec->firstName }} {{ $gandsec->lastName }} ">{{ $gandsec->id }} | {{ $gandsec->firstName }} {{ $gandsec->lastName }} </option>
             @endforeach
         </select><br>
           </div>

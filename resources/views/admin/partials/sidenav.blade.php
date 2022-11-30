@@ -52,6 +52,12 @@
                                                 <span class="text nav-text">Department</span>
                                             </a>
                                             </li>
+                                        <li class="bottom-content">
+                                            <a href="{{ ('/admin/classlist') }}">
+                                                <i class='bx bxs-graduation icon' ></i>
+                                                <span class="text nav-text">Class List</span>
+                                            </a>
+                                            </li>
                                            
                                  
                                                 

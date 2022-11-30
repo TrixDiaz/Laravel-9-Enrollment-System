@@ -19,11 +19,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $dep = departments::count();
-        $stud = students::count();
-        $gandsec = gradeandsection::count();
-        $tands = trackandstrand::all();
-        $fac = faculties::count();
+        // $dep = departments::count();
+        // $stud = students::count();
+        // $gandsec = gradeandsection::count();
+        // $tands = trackandstrand::all();
+        // $fac = faculties::count();
 
         return view('admin.admindashboard', compact('dep', 'stud', 'gandsec', 'tands','fac'));
         // return view('admin.admindashboard', ['departments'=>$dep],['students'=>$stud]+['gradeandsection'=>$gandsec]+['trackandstrand'=>$tands]+['faculties'=>$fac]);

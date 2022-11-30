@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Classes;
 
-class ClassController extends Controller
+class ClasslistController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class ClassController extends Controller
      */
     public function index()
     {
-        $data = Classes::all();
-        return view('admin.gradeandsection.show',['classes'=>$data]);
+        return view('admin.classlist.classlist');
     }
 
     /**
