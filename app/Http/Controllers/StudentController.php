@@ -55,6 +55,7 @@ class StudentController extends Controller
              'gender' => 'required',
              'dateOfBirth' => 'required',
              'address' => 'required',
+             'track' => 'required',
             //  'section' => 'required',
              'strandID' => 'required',
              'sectionID' => 'required',
@@ -72,6 +73,7 @@ class StudentController extends Controller
          $student->gender = $request->input('gender');
          $student->dateOfBirth = $request->input('dateOfBirth');
          $student->address = $request->input('address');
+         $student->track = $request->input('track');
         //  $student->section = $request->input('section');
          $student->strandID = $request->input('strandID');
          $student->sectionID = $request->input('sectionID');

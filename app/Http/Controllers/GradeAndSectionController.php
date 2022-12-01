@@ -25,7 +25,8 @@ class GradeAndSectionController extends Controller
         $tands = TrackAndStrand::all();
         $facs = Faculties::all();
         $subs = Subjects::all();
-        return view('admin.gradeandsection.gradeandsection',['gradeandsections'=>$gandsec]+['trackandstrand'=>$tands]+['faculties'=>$facs]+['subjects'=>$subs]);
+        $stud = Students::all();
+        return view('admin.gradeandsection.gradeandsection',['gradeandsections'=>$gandsec]+['trackandstrand'=>$tands]+['faculties'=>$facs]+['subjects'=>$subs]+['students'=>$stud]);
         // return view('admin.gradeandsection.gradeandsection')->with('gradeandsections', $gandsec);
     }
 
@@ -56,6 +57,9 @@ class GradeAndSectionController extends Controller
             'gradeLevel' => 'required',
             'faculty' => 'required',
             'subject' => 'required',
+            // 'timeAm' => 'required',
+            // 'timePm' => 'required',
+            'schedule' => 'required',
             
             
         ]);
@@ -67,6 +71,9 @@ class GradeAndSectionController extends Controller
         $gradeandsection->gradeLevel = $request->input('gradeLevel');
         $gradeandsection->faculty = $request->input('faculty');
         $gradeandsection->subject = $request->input('subject');
+        $gradeandsection->timeAm = $request->input('timeAm');
+        $gradeandsection->timePm = $request->input('timePm');
+        $gradeandsection->schedule = $request->input('schedule');
         
 
         $gradeandsection->save();
@@ -98,15 +105,15 @@ class GradeAndSectionController extends Controller
         ->get();
 
         $gradeandsection = gradeandsection::all();
-        $class = DB::table('classes')
-        ->where('section','=',$id)
+        $studs = DB::table('students')
+        ->where('sectionID','=',$id)
         ->get(); 
         
         $gradeandsection = DB::table('grade_and_sections')
         ->where('sectionID','=',$id)
         ->get();
         // $stud = students::find($);        
-        return view ('admin.gradeandsection.show',['gradeandsections'=>$gradeandsection]+['classes'=>$class]+['students'=>$stud]+['students'=>$data]);
+        return view ('admin.gradeandsection.show',['gradeandsections'=>$gradeandsection]+['classes'=>$studs]+['students'=>$stud]+['students'=>$data]);
         // $gandsec = gradeandsection::find($id);
         // return view('admin.gradeandsection.join',['grade_and_sections'=>$sectionID]);
         // return view('admin.gradeandsection.show',['gradeandsection'=>$gandsec]+['students'=>$stud]);
@@ -131,9 +138,9 @@ class GradeAndSectionController extends Controller
     // }
      public function test($id) {
               $gandsec = gradeandsection::findorFail($id);
-              $cla = classes::all();
+            //   $cla = classes::all();
              
-              return view('admin.gradeandsection.show',['gradeandsections'=>$gandsec]+['classes'=>$cla]);
+              return view('admin.gradeandsection.show',['gradeandsections'=>$gandsec]);
          }
 
      public function filterdata() 

@@ -138,7 +138,7 @@
             {{-- End of Modal --}}
 
             <div class="container">
-                <h1>Student List</h1>
+                <h1>Class List</h1>
                 @if(count($errors) > 0)
             
                 <div class = "alert alert-danger">
@@ -166,13 +166,13 @@
         <th scope="col">First Name</th> 
         <th scope="col">Middle Name</th> 
         <th scope="col">Last Name</th> 
-        <th scope="col">Gender</th> 
-        <th scope="col">Date of Birth</th> 
-        <th scope="col">Address</th> 
+        {{-- <th scope="col">Gender</th>  --}}
+        {{-- <th scope="col">Date of Birth</th>  --}}
+        {{-- <th scope="col">Address</th>  --}}
         <th scope="col">Track and Strand</th> 
-        <th scope="col">School Last Attended</th> 
-        <th scope="col">Email</th> 
-        <th scope="col">Password</th> 
+        {{-- <th scope="col">School Last Attended</th>  --}}
+        {{-- <th scope="col">Email</th>  --}}
+        {{-- <th scope="col">Password</th>  --}}
         <th scope="col">Section</th> 
         <th scope="col">Subject</th> 
         </tr>
@@ -186,13 +186,13 @@
             <td>{{ $class->firstName }}</td>
             <td>{{ $class->middleName }}</td>
             <td>{{ $class->lastName }}</td>
-            <td>{{ $class->gender }}</td>
-            <td>{{ $class->dateOfBirth }}</td>
-            <td>{{ $class->address }}</td>
+            {{-- <td>{{ $class->gender }}</td> --}}
+            {{-- <td>{{ $class->dateOfBirth }}</td> --}}
+            {{-- <td>{{ $class->address }}</td> --}}
             <td>{{ $class->strandID }}</td>
-            <td>{{ $class->schoolLastAttended }}</td>
-            <td>{{ $class->email }}</td>
-            <td>{{ $class->password }}</td>
+            {{-- <td>{{ $class->schoolLastAttended }}</td> --}}
+            {{-- <td>{{ $class->email }}</td>
+            <td>{{ $class->password }}</td> --}}
             <td>{{ $class->sectionID }}</td>
             @foreach($gradeandsections as $class)
             <td>{{ $class->subject }}</td>

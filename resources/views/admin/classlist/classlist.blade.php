@@ -82,3 +82,28 @@
 
 {{-- End add Modal --}}
 
+<div class="container">
+  <h1>Grade And Section List</h1>
+  @if(count($errors) > 0)
+
+  <div class = "alert alert-danger">
+      <ul>
+          @foreach($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+      </ul>
+  </div>
+  @endif
+  
+  @if(\Session::has('success'))
+  <div class="alert alert-success">
+      <p>{{ \Session::get('success') }}</p>
+  </div>
+  @endif
+  
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  + New Grade and Section
+</button>
+
+<br><br>
+</div>

@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('sectionName');
             $table->string('gradeLevel');
             $table->string('faculty');
-            $table->string('subject');
-            $table->string('subjectID');
+            $table->string('subject')->unique();
+            $table->string('timeAm')->nullable();
+            $table->string('timePm')->nullable();
+            $table->string('schedule');
             $table->timestamps();
         });
     }

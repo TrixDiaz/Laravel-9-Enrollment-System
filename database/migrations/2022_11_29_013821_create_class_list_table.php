@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('sectionID');
             $table->string('startHr');
             $table->string('endHr');
+            $table->string('schedule');
             $table->string('strandID');
             $table->timestamps();
         });

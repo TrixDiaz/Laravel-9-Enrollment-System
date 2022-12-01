@@ -192,5 +192,42 @@ modal.style.display = "none";
 var modal = document.getElementById('newTrackandStrand');
 
 
+
   
         });
+
+        function showDiv(prefix, chooser) {
+          var selectedOption = (chooser.options[chooser.selectedIndex].value);
+          if (selectedOption == "11") {
+            var div = document.getElementById(prefix + "11");
+            div.style.display = 'block';
+            
+            var div = document.getElementById(prefix + "12");
+            div.style.display = 'None';
+            
+          } else if(selectedOption == "12") {
+            var div = document.getElementById(prefix + "12");
+            div.style.display = 'block';
+            
+            var div = document.getElementById(prefix + "11");
+            div.style.display = 'None';
+          } 
+        }
+
+        // function showTandS(prefix, chooser) {
+        //   var selectedOption = (chooser.options[chooser.selectedIndex].value);
+        //   if (selectedOption == "TVL") {
+        //     var div = document.getElementById(prefix + "TVL");
+        //     div.style.display = 'block';
+            
+        //     var div = document.getElementById(prefix + "Academic");
+        //     div.style.display = 'None';
+            
+        //   } else if(selectedOption == "Academic") {
+        //     var div = document.getElementById(prefix + "Academic");
+        //     div.style.display = 'block';
+            
+        //     var div = document.getElementById(prefix + "TVL");
+        //     div.style.display = 'None';
+        //   } 
+        // }

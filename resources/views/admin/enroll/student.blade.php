@@ -82,17 +82,30 @@
                   </select>
                   </div>
                 </div> --}}
+              <div class="col-6">
+                <div class="form-group">
+                  <label>Track</label>
+                  <select name="track" class="form-control">
+                    <option selected disabled>Track</option>
+                    @foreach($trackandstrand as $stud)
+                    <option value="{{ $stud->track }}">{{ $stud->track }}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+                  
                 <div class="col-6">
                   <div class="form-group">
-                    <label>Track and Strand</label>
+                    <label>Strand</label>
                     <select name="strandID" class="form-control" >
-                    <option value =""selected disabled>Track and Strand</option>
+                    <option value =""selected disabled>Strand</option>
                     @foreach ( $trackandstrand as $stud )
-                    <option value="{{ $stud->track }} - {{ $stud->strandID }}">{{ $stud->track }} - {{ $stud->strandID }}</option>
+                    <option value="{{ $stud->strandID }}">{{ $stud->strandID}}</option>
                     @endforeach
                   </select>
                   </div>
                 </div>
+                
                 <div class="col-6">
                   <div class="form-group">
                     <label>Section </label>
@@ -361,7 +374,8 @@
             <th scope="col">Gender</th>
             <th scope="col">Date Of Birth</th>
             <th scope="col">Address</th>
-            <th scope="col">Track and Strand</th>
+            <th scope="col">Track</th>
+            <th scope="col">Strand</th>
             <th scope="col">Section</th>
             <th scope="col">School Last Attended</th>
             <th scope="col">Student Email</th>
@@ -379,6 +393,7 @@
               <td>{{ $student->gender}} </td>
               <td>{{ $student->dateOfBirth}} </td>
               <td>{{ $student->address}} </td>
+              <td>{{ $student->track}} </td>
               {{-- <td>{{ $student->section}} </td> --}}
               <td>{{ $student->strandID}} </td>
               <td>{{ $student->sectionID}} </td>
