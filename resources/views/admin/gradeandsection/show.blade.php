@@ -111,7 +111,7 @@
         <div class="col-6">   
             <div class="form-group">
                 <label>Subject</label>
-                <input type="text" name ="subject" id="subject" class="form-control"  value="{{ $class->subject }}"readonly>
+                <input type="text" name ="subjectID" id="subjectID" class="form-control"  value="{{ $class->subjectID }}"readonly>
                 @endforeach
               </div>
             </div>  

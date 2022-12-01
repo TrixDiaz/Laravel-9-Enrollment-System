@@ -56,9 +56,9 @@ class GradeAndSectionController extends Controller
             'sectionName' => 'required',
             'gradeLevel' => 'required',
             'faculty' => 'required',
-            'subject' => 'required',
-            // 'timeAm' => 'required',
-            // 'timePm' => 'required',
+            'subjectID' => 'required',
+             'startHr' => 'nullable',
+             'endHr' => 'nullable',
             'schedule' => 'required',
             
             
@@ -70,9 +70,9 @@ class GradeAndSectionController extends Controller
         $gradeandsection->sectionName = $request->input('sectionName');
         $gradeandsection->gradeLevel = $request->input('gradeLevel');
         $gradeandsection->faculty = $request->input('faculty');
-        $gradeandsection->subject = $request->input('subject');
-        $gradeandsection->timeAm = $request->input('timeAm');
-        $gradeandsection->timePm = $request->input('timePm');
+        $gradeandsection->subjectID = $request->input('subjectID');
+        $gradeandsection->startHr = $request->input('startHr');
+        $gradeandsection->endHr = $request->input('endHr');
         $gradeandsection->schedule = $request->input('schedule');
         
 
@@ -143,10 +143,10 @@ class GradeAndSectionController extends Controller
               return view('admin.gradeandsection.show',['gradeandsections'=>$gandsec]);
          }
 
-     public function filterdata() 
-     {
-         return view ('admin.gradeandsection.show');
-     }
+    //  public function filterdata() 
+    //  {
+    //      return view ('admin.gradeandsection.show');
+    //  }
     // /**
     //  * Show the form for editing the specified resource.
     //  *
@@ -154,39 +154,39 @@ class GradeAndSectionController extends Controller
     //  * @return \Illuminate\Http\Response
     //  */
     
-     public function getStudent() {
-        $p=students::all();
-        var_dump($p);
-       return response()->json($p);
-    }
+    //  public function getStudent() {
+    //     $p=students::all();
+    //     var_dump($p);
+    //    return response()->json($p);
+    // }
 
      public function edit($id)
     {
         //
     }
 
-     public function filtercreate(Request $request) {
-         //dd($request);
-         $validated = $request->validate([
-             "studentID"=>['required'],
-             "firstName"=>['required'],
-             "middleName"=>['required'],
-             "lastName"=>[ 'required'],
-             "gender"=>[ 'required'],
-             "dateOfBirth"=>[ 'required'],
-            "address"=>[ 'required'],
-             "strandID"=>[ 'required'],
-            "schoolLastAttended"=>[ 'required'],
-            "email"=> ['required'],
-             "password"=>['required'],
-             "section"=>[ 'required'],
-            "subject"=>[ 'required'],
-         ]);
+    //  public function filtercreate(Request $request) {
+    //      //dd($request);
+    //      $validated = $request->validate([
+    //          "studentID"=>['required'],
+    //          "firstName"=>['required'],
+    //          "middleName"=>['required'],
+    //          "lastName"=>[ 'required'],
+    //          "gender"=>[ 'required'],
+    //          "dateOfBirth"=>[ 'required'],
+    //         "address"=>[ 'required'],
+    //          "strandID"=>[ 'required'],
+    //         "schoolLastAttended"=>[ 'required'],
+    //         "email"=> ['required'],
+    //          "password"=>['required'],
+    //          "section"=>[ 'required'],
+    //         "subject"=>[ 'required'],
+    //      ]);
 
-         $section = GradeAndSection::create($validated);
+    //      $section = GradeAndSection::create($validated);
 
-         return back()->with('message','Successfully Created');
-     }
+    //      return back()->with('message','Successfully Created');
+    //  }
     /**
      * Update the specified resource in storage.
      *

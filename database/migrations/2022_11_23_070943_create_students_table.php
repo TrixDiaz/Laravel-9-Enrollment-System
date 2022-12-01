@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('dateOfBirth');
             $table->string('address');
+            $table->string('track');
             $table->string('strandID');
             $table->string('sectionID');
             $table->string('schoolLastAttended');

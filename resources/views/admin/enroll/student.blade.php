@@ -334,8 +334,8 @@
 </div>
 </div>
   {{-- End Edit Modal --}}
-
   <div class="container">
+    
     <h1>Student List</h1>
     @if(count($errors) > 0)
 
@@ -364,7 +364,7 @@
    
    <br><br>
 
-      <table class="table table-striped" id="datatable">
+      <table class="table table-responsive table-striped " id="datatable">
         <thead>
           <tr>
             <th scope="col">Student ID</th>
@@ -409,7 +409,8 @@
           @endforeach
         </tbody>
       </table>
-          </div>
+      </div>
+
 
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

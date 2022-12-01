@@ -54,38 +54,47 @@
                 
           <div class="form-group">
             <label>Grade Level </label>
-            <select name="gradeLevel" id="cboOptions" onchange="showDiv('div',this)" class="form-control">
+            <select name="gradeLevel" id="cboOptions" class="form-control">
               <option selected disabled>Grade Level</option>
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <div id="div11" style="display:none;">
-              <label>Grade 11 Shift </label>
-              <select id="type" name="timeAm" class="form-control">
-                <option selected disabled>Time</option>
-                <option value="6:00 AM - 8:00 AM">6:00 AM - 8:00 AM</option>
-                <option value="8:00 AM - 10:00 AM">8:00 AM- 10:00 AM </option>
-                <option value="10:00 AM - 12:00 NN">10:00 AM - 12:00 NN</option>
-              </select>
+            <div id="div11">
+              <div class="row">
+                <div class="col-6">
+              <label>Start Hour </label>
+              <input type="time" id="type" name="startHr" class="form-control">
+              </div>
+              <div class="col-6">
+              <label>End Hour </label>
+              <input type="time" id="type" name="endHr" class="form-control">
+              </div>
             </div>
-            <div id="div12" style="display:none;">
+            </div>
+            <!-- <div id="div12" style="display:none;">
               <label>Grade 12 Shift </label>
-              <select id="types" name="timePm" class="form-control">
-                <option selected disabled>Time</option>
-                <option value="1:00 PM - 3:00 PM">1:00 PM - 3:00 PM</option>
-                <option value="3:00 PM - 5:00 PM">3:00 PM - 5:00 PM </option>
-                <option value="5:00 PM - 7:00 PM">5:00 PM - 7:00 PM</option>
-              </select>
+              <div class="row">
+                <div class="col-6">
+              <label>Start Hour </label>
+              <input type="time" id="types" name="startHr1" class="form-control">
+              </div>
+              <div class="col-6">
+              <label>End Hour </label>
+              <input type="time" id="types" name="endHr1" class="form-control">
+              </div>
             </div>
+            </div> -->
           </div>
 
           <div class="form-group">
             <label>Schedule</label>
             <select id="schedule" name="schedule" class="form-control">
               <option selected disabled>Schedule</option>
-              <option value="Mon, Wed">Mon, Wed</option>
-              <option value="Tues, Thurs">Tues, Thurs</option>
-              <option value="Fri">Fri</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
             </select>
           </div>
    
@@ -95,14 +104,14 @@
           <select name="faculty" id="faculty" class="form-control">
           <option selected disabled>Faculty Assigned</option>
           @foreach( $faculties as $gandsec)  
-          <option value="{{ $gandsec->facultyID }} - {{ $gandsec->firstName }} {{ $gandsec->lastName }} ">{{ $gandsec->id }} - {{ $gandsec->firstName }} {{ $gandsec->lastName }} </option>
+          <option value="{{ $gandsec->facultyID }}">{{ $gandsec->facultyID }}</option>
             @endforeach
         </select>
           </div>
 
           <div class="form-group">
             <label for="subject">Subject Assigned</label><br>
-          <select name="subject" id="subject" class="form-control">
+          <select name="subjectID" id="subjectID" class="form-control">
           <option selected disabled>Subject Assigned</option>
           @foreach( $subjects as $gandsec)  
           <option value="{{ $gandsec->subjectID }}">{{ $gandsec->subjectID }}</option>
@@ -199,7 +208,7 @@
 
           <div class="form-group">
             <label for="subject">Subject Assigned</label><br>
-          <select name="subject" id="subject" class="form-control">
+          <select name="subjectID" id="subjectID" class="form-control">
           <option selected disabled>Subject Assigned</option>
           @foreach( $subjects as $gandsec)  
           <option value="{{ $gandsec->subjectID }}">{{ $gandsec->subjectID }}</option>
@@ -259,8 +268,8 @@
             <th scope="col">Grade Level</th>
             <th scope="col">Faculty Assigned</th>
             <th scope="col">Subject Assigned</th>
-            <th scope="col">Time AM</th>
-            <th scope="col">Time PM</th>
+            <th scope="col">Start Hour</th>
+            <th scope="col">End Hour</th>
             <th scope="col">Schedule</th>
             <th scope="col">Operation</th>   
           </tr>
@@ -273,9 +282,9 @@
                 <td>{{ $gradeandsection->sectionName}}</td> 
                 <td>{{ $gradeandsection->gradeLevel }} </td>
                 <td>{{ $gradeandsection->faculty }}</td>
-                <td>{{ $gradeandsection->subject }}</td>
-                <td>{{ $gradeandsection->timeAm }}</td>
-                <td>{{ $gradeandsection->timePm }}</td>
+                <td>{{ $gradeandsection->subjectID}}</td>
+                <td>{{ $gradeandsection->startHr }}</td>
+                <td>{{ $gradeandsection->endHr }}</td>
                 <td>{{ $gradeandsection->schedule }}</td>
                 <td>
 
@@ -315,8 +324,8 @@ table.on('click', '.edit', function() {
   $('#gradeLevel').val(data[2]);
   $('#faculty').val(data[3]);
   $('#subject').val(data[4]);
-  $('#timeAm').val(data[5]);
-  $('#timePm').val(data[6]);
+  $('#startHr').val(data[5]);
+  $('#endHr').val(data[6]);
   $('#schedule').val(data[7]);
   
   

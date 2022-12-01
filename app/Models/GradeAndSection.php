@@ -14,6 +14,6 @@ class GradeAndSection extends Model
         'sectionName',
         'gradeLevel',
         'faculty',
-        'subject',
+        'subjectID',
     ];
 }
