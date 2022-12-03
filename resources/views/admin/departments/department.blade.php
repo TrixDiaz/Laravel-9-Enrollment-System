@@ -10,7 +10,7 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Faculty List</title>
+    <title>Department List</title>
     
     @include("admin.partials.topnav")
 </head>
@@ -63,7 +63,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-    <form action="/admin/faculty/" method="post" id="editForm">
+    <form action="{{ url('/admin/departments/') }}" method="post" id="editForm">
   
         {{ csrf_field() }}
         {{ method_field('PUT') }}

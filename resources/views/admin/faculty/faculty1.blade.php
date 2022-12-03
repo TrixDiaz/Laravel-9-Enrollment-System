@@ -260,7 +260,8 @@ table.on('click', '.edit', function() {
     var data = table.row($tr).data();
     console.log(data);
 
- 
+
+    // $('#facultyID').val(data[0]);
     $('#firstName').val(data[1]);
     $('#lastName').val(data[2]);
     $('#middleName').val(data[3]);
@@ -269,7 +270,7 @@ table.on('click', '.edit', function() {
     $('#password').val(data[6]);
     $('#department').val(data[7]);
     // $('#section').val(data[8]);
-
+    
     $('#editForm').attr('action', '/admin/faculty/'+data[0]);
     $('#editModal').modal('show');
 });

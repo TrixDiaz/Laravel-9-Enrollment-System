@@ -169,7 +169,7 @@
         {{-- <th scope="col">Gender</th>  --}}
         {{-- <th scope="col">Date of Birth</th>  --}}
         {{-- <th scope="col">Address</th>  --}}
-        <th scope="col">Track and Strand</th> 
+        <th scope="col">Strand</th> 
         {{-- <th scope="col">School Last Attended</th>  --}}
         {{-- <th scope="col">Email</th>  --}}
         {{-- <th scope="col">Password</th>  --}}
@@ -195,7 +195,7 @@
             <td>{{ $class->password }}</td> --}}
             <td>{{ $class->sectionID }}</td>
             @foreach($gradeandsections as $class)
-            <td>{{ $class->subject }}</td>
+            <td>{{ $class->subjectID }}</td>
             @endforeach
       </tr>
       @endforeach       

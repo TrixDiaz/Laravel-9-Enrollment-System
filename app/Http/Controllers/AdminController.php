@@ -31,9 +31,9 @@ class AdminController extends Controller
         if(auth()->attempt($validated)){
             $request->session()->regenerate();
 
-            return redirect('/admin/admindashboard')->with('message','Welcome');
+            return redirect('/admin/enroll')->with('message','Welcome');
         }else{
-            return redirect('/admin/admindashboard')->with('message','login failed');        
+            return redirect('/admin/enroll')->with('message','login failed');        
         }
 
     }
@@ -67,7 +67,7 @@ class AdminController extends Controller
     }
     
     public function index(){
-    return view('admin/admindashboard');
+    return view('admin/enroll');
     }
     
    

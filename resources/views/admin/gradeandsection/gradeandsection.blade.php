@@ -56,21 +56,12 @@
             <label>Grade Level </label>
             <select name="gradeLevel" id="cboOptions" class="form-control">
               <option selected disabled>Grade Level</option>
+              {{-- @foreach ($subjects as $gands ) --}}
               <option value="11">11</option>
               <option value="12">12</option>
+              {{-- @endforeach --}}
             </select>
-            <div id="div11">
-              <div class="row">
-                <div class="col-6">
-              <label>Start Hour </label>
-              <input type="time" id="type" name="startHr" class="form-control">
-              </div>
-              <div class="col-6">
-              <label>End Hour </label>
-              <input type="time" id="type" name="endHr" class="form-control">
-              </div>
-            </div>
-            </div>
+            
             <!-- <div id="div12" style="display:none;">
               <label>Grade 12 Shift </label>
               <div class="row">
@@ -117,6 +108,18 @@
           <option value="{{ $gandsec->subjectID }}">{{ $gandsec->subjectID }}</option>
             @endforeach
           </select>
+          </div>
+          <div id="div11">
+            <div class="row">
+              <div class="col-6">
+            <label>Start Hour </label>
+            <input type="time" id="type" name="startHr" class="form-control">
+            </div>
+            <div class="col-6">
+            <label>End Hour </label>
+            <input type="time" id="type" name="endHr" class="form-control">
+            </div>
+          </div>
           </div>
  
     </div>

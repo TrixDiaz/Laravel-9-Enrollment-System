@@ -10,7 +10,7 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title>Faculty List</title>
+    <title>Student List</title>
     
     @include("admin.partials.topnav")
 </head>
@@ -105,7 +105,7 @@
                   </select>
                   </div>
                 </div>
-                
+
                 <div class="col-6">
                   <div class="form-group">
                     <label>Section </label>
@@ -283,15 +283,27 @@
             </div> --}}
             <div class="col-6">
               <div class="form-group">
-                <label>Track and Strand</label>
-                <select name="strandID" id="strandID" class="form-control" >
-                <option value =""selected disabled>Track and Strand</option>
+                <label>Track</label>
+                <select name="track" id="track" class="form-control" >
+                <option value =""selected disabled>Track</option>
                 @foreach ( $trackandstrand as $stud )
-                <option value="{{ $stud->track }} - {{ $stud->strandID }}">{{ $stud->track }} - {{ $stud->strandID }}</option>
+                <option value="{{ $stud->track }}">{{ $stud->track }}</option>
                   @endforeach
               </select>
               </div>
             </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label>Strand</label>
+                <select name="strandID" id="strandID" class="form-control" >
+                <option value =""selected disabled>Strand</option>
+                @foreach ( $trackandstrand as $stud )
+                <option value="{{ $stud->strandID }}">{{ $stud->strandID}}</option>
+                @endforeach
+              </select>
+              </div>
+            </div>
+
             <div class="col-6">
               <div class="form-group">
                 <label>Section </label>
@@ -422,7 +434,48 @@
 <script src="/js/script.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
+//track and strand object
 
+// var trackObject = {
+//   "TVL": {
+//     "ICT": ["Animation", "Programming"],
+//     "IA": ["Automotive Servicing",]
+//   },
+//   "ACAD": {
+//     "HUMSS": [""],
+//     "ABM": [""]
+//   }
+// }
+// window.onload = function() {
+//   var trackSel = document.getElementById("trackSel"),
+//   strandSel = document.getElementById("strandSel"),
+//   subjectSel = document.getElementById("subjectSel");
+
+//   for(var track in trackObject) {
+//     trackSel.options[trackSel.options.length] = new Option(track, track);
+//   }
+
+//   trackSel.onchange = function() {
+//     strandSel.length = 1;
+//     subjectSel.length = 1;
+//     if(this.selectedIndex < 1) return;
+//     for(var strand in trackObject[this.value]) {
+//       strandSel.options[strandSel.options.length] new Option(strand, strand);
+//     }
+//   } 
+
+//   trackSel.onchange();
+
+//   strandSel.onchange = function() {
+//     subjectSel.length = 1;
+//     if(this.selectedIndex < 1) return;
+
+//     var subject = trackObject[trackSel.value][this.value];
+//     for(var i = 0; i < subject.length; i++) {
+//       subjectSel.options[subjectSel.options.length] = new Option (subject[i], subject[i]);
+//     }
+//   }
+// }
 var table = $('#datatable').DataTable();
 //Start Edit Record
 table.on('click', '.edit', function() {
@@ -442,11 +495,12 @@ $('#middleName').val(data[3]);
 $('#gender').val(data[4]);
 $('#dateOfBirth').val(data[5]);
 $('#address').val(data[6]);
-$('#strandID').val(data[7]);
-$('#sectionID').val(data[8]);
-$('#schoolLastAttended').val(data[9]);
-$('#email').val(data[10]);
-$('#password').val(data[11]);
+$('#track').val(data[7]);
+$('#strandID').val(data[8]);
+$('#sectionID').val(data[9]);
+$('#schoolLastAttended').val(data[10]);
+$('#email').val(data[11]);
+$('#password').val(data[12]);
 // $('#section').val(data[7]);
 
 // $('#schoolLastAttendedAddress').val(data[10]);

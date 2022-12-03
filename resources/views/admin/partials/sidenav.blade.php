@@ -15,28 +15,28 @@
         <div class="menu-bar"> 
             <div class="menu">
                 <ul class="menu-links">
-                    <li class="bottom-content">
+                    {{-- <li class="bottom-content">
                     <a href="{{('/admin/admindashboard')}}">
                         <i class='bx bx-home icon'  ></i>
                         <span class="text nav-text">Admin Dashboard</span>
                     </a>
-                    </li>
+                    </li> --}}
                     <li class="bottom-content">
                         <a href="{{('/admin/enroll/')}}">
-                            <i class='bx bx-lock icon' ></i>
+                            <i class='bx bxs-user icon' ></i>
                             <span class="text nav-text">Students</span>
                         </a>
                         </li>
                         <li class="bottom-content">
                             <a href="{{('/admin/faculty/')}}">
-                                <i class='bx bx-calendar icon'></i>
+                                <i class='bx bxs-group icon'></i>
                                 <span class="text nav-text">Faculty</span>
                             </a>
                             </li>
                          
                             <li class="bottom-content">
                                 <a href="{{ ('/admin/gradeandsection/') }}">
-                                    <i class='bx bx-registered icon' ></i>
+                                    <i class='bx bxs-widget icon' ></i>
                                     <span class="text nav-text">Grade and Section</span>
                                 </a>
                                 </li>
@@ -48,14 +48,14 @@
                                         </li>
                                         <li class="bottom-content">
                                             <a href="{{ ('/admin/departments') }}">
-                                                <i class='bx bxs-graduation icon' ></i>
+                                                <i class='bx bxs-institution icon' ></i>
                                                 <span class="text nav-text">Department</span>
                                             </a>
                                             </li>
                                         <li class="bottom-content">
-                                            <a href="{{ ('/admin/classlist') }}">
-                                                <i class='bx bxs-graduation icon' ></i>
-                                                <span class="text nav-text">Class List</span>
+                                            <a href="{{ ('/admin/subjects') }}">
+                                                <i class='bx bxs-book-add icon' ></i>
+                                                <span class="text nav-text">Subjects</span>
                                             </a>
                                             </li>
                                            

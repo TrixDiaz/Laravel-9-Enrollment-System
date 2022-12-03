@@ -12,6 +12,7 @@ use App\Http\Controllers\SchoolYearController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ClasslistController;
+use App\Http\Controllers\SubjectController;
 /*
 /*
 |--------------------------------------------------------------------------
@@ -134,3 +135,5 @@ Route::resource('/admin/', DashboardController::class);
     
 //Classes COntroller
 Route::resource('/admin/classlist', ClasslistController::class);
+//Subject Controller
+Route::resource('/admin/subjects', SubjectController::class);
