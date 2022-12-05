@@ -210,7 +210,6 @@
       <th scope="col">Username</th>
       <th scope="col">Password</th>
       <th scope="col">Department</th>
-      {{-- <th scope="col">Section</th> --}}
       <th scope="col">Operation</th>
     </tr>
   </thead>
@@ -225,7 +224,6 @@
         <td>{{ $faculty->username}} </td>
         <td>{{ $faculty->password}} </td>
         <td>{{ $faculty->department}} </td>
-        {{-- <td>{{ $faculty->section}} </td>    --}}
         <td>
           
           {{-- <a href="/admin/faculty/show" class="btn btn-primary view"> VIEW </a> --}}

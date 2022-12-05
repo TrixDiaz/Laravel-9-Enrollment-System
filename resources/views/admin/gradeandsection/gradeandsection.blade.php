@@ -291,8 +291,8 @@
                 <td>{{ $gradeandsection->schedule }}</td>
                 <td>
 
-                    <a href="/admin/gradeandsection/show/{{ $gradeandsection->sectionID }}" class="btn btn-primary view">CLASS</a>
-                    <a href="#" class="btn btn-success edit"> EDIT</a>
+                    <a href="/admin/gradeandsection/show/{{ $gradeandsection->sectionID }}" class="btn btn-primary view">VIEW CLASS</a>
+                    {{-- <a href="#" class="btn btn-success edit"> EDIT</a> --}}
 
                 </td>
                 </tr>

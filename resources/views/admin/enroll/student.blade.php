@@ -219,17 +219,24 @@
 <div class="modal fade bd-example-modal-lg" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
+      {{-- <div class="container"> --}}
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div class="container">
-        <form action="{{ url('/admin/enroll/') }}" method="post">
-          {{ csrf_field() }}
+        <form action="/admin/enroll/" method="post" id="editForm">
+        {{ csrf_field() }}
         {{ method_field('PUT') }}
           <div class="row">
-            <div class="col-12">
+            {{-- <div class="col-12">
               <div class="form-group">
                 <label for="studentID">Student ID</label>
                 <input type="text" name ="studentID" id = "studentID" class="form-control"  placeholder="Student ID" readonly>
               </div>
-            </div>
+            </div> --}}
             <div class="col-6">
               <div class="form-group">
                 <label>First Name</label>
@@ -406,7 +413,6 @@
               <td>{{ $student->dateOfBirth}} </td>
               <td>{{ $student->address}} </td>
               <td>{{ $student->track}} </td>
-              {{-- <td>{{ $student->section}} </td> --}}
               <td>{{ $student->strandID}} </td>
               <td>{{ $student->sectionID}} </td>
               <td>{{ $student->schoolLastAttended}} </td>
@@ -434,48 +440,7 @@
 <script src="/js/script.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-//track and strand object
 
-// var trackObject = {
-//   "TVL": {
-//     "ICT": ["Animation", "Programming"],
-//     "IA": ["Automotive Servicing",]
-//   },
-//   "ACAD": {
-//     "HUMSS": [""],
-//     "ABM": [""]
-//   }
-// }
-// window.onload = function() {
-//   var trackSel = document.getElementById("trackSel"),
-//   strandSel = document.getElementById("strandSel"),
-//   subjectSel = document.getElementById("subjectSel");
-
-//   for(var track in trackObject) {
-//     trackSel.options[trackSel.options.length] = new Option(track, track);
-//   }
-
-//   trackSel.onchange = function() {
-//     strandSel.length = 1;
-//     subjectSel.length = 1;
-//     if(this.selectedIndex < 1) return;
-//     for(var strand in trackObject[this.value]) {
-//       strandSel.options[strandSel.options.length] new Option(strand, strand);
-//     }
-//   } 
-
-//   trackSel.onchange();
-
-//   strandSel.onchange = function() {
-//     subjectSel.length = 1;
-//     if(this.selectedIndex < 1) return;
-
-//     var subject = trackObject[trackSel.value][this.value];
-//     for(var i = 0; i < subject.length; i++) {
-//       subjectSel.options[subjectSel.options.length] = new Option (subject[i], subject[i]);
-//     }
-//   }
-// }
 var table = $('#datatable').DataTable();
 //Start Edit Record
 table.on('click', '.edit', function() {
@@ -488,7 +453,7 @@ if($($tr).hasClass('child')) {
 var data = table.row($tr).data();
 console.log(data);
 
-$('#studentID').val(data[0]);
+// $('#studentID').val(data[0]);
 $('#firstName').val(data[1]);
 $('#lastName').val(data[2]);
 $('#middleName').val(data[3]);

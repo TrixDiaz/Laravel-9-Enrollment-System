@@ -16,7 +16,7 @@ class TrackAndStrandController extends Controller
     public function index()
     {
         $trackandstrands = trackandstrand::all();
-        return view('admin.trackandstrand.trackandstrand1')->with('trackandstrands', $trackandstrands);
+        return view('admin.trackandstrand.trackandstrand')->with('trackandstrands', $trackandstrands);
     }
 
     /**

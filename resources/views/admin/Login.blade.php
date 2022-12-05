@@ -26,7 +26,7 @@
         </div>
         
         <input type="submit" value="Login" class="submit-btn">
-        <a href="/admin/register" class="enroll">For admin registration</a>
+        {{-- <a href="/admin/register" class="enroll">For admin registration</a> --}}
         <p class = "text-gray-300 pt-2"> Switch to <a href="/Login" class="enroll">Student</a></p>
             </form>
         </div>

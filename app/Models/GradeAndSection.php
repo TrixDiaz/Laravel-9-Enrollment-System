@@ -15,5 +15,8 @@ class GradeAndSection extends Model
         'gradeLevel',
         'faculty',
         'subjectID',
+        'startHr',
+        'endHr',
+        'schedule',
     ];
 }

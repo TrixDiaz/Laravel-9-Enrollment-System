@@ -69,7 +69,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-    <form action="/admin/trackandstrand" method="post" id="editForm">
+    <form action="/admin/trackandstrand/" method="post" id="editForm">
   
         {{ csrf_field() }}
         {{ method_field('PUT') }}
@@ -130,6 +130,7 @@
       <table class="table table-striped" id="datatable">
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">Track</th>
             <th scope="col">Strand ID</th>
             <th scope="col">Strand Name</th>
@@ -139,6 +140,7 @@
         <tbody>
             @foreach ($trackandstrands as $trackandstrand )
                 <tr>
+                <td>{{ $trackandstrand->id}} </td>
                 <td>{{ $trackandstrand->track}} </td>
                 <td>{{ $trackandstrand->strandID}} </td>
                 <td>{{ $trackandstrand->strandName}} </td>
@@ -174,9 +176,9 @@ table.on('click', '.edit', function() {
   var data = table.row($tr).data();
   console.log(data);
 
-  $('#track').val(data[0]);
-  $('#strandID').val(data[1]);
-  $('#strandName').val(data[2]);
+  $('#track').val(data[1]);
+  $('#strandID').val(data[2]);
+  $('#strandName').val(data[3]);
   
   $('#editForm').attr('action', '/admin/trackandstrand'+data[0]);
   $('#editModal').modal('show');

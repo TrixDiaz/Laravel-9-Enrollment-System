@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TrackAndStrand extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'track',
+        'strandID',
+        'strandName',                                                                                                                                                                                          
+    ];
 }

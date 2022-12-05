@@ -20,7 +20,7 @@ class StudentController extends Controller
     public function index()
     {
         // $fac = faculties::all();
-        $stud = students::paginate(3);
+        $stud = students::all();
         $tands = trackandstrand::all();
         $gandsec = gradeandsection::all();
         return view('admin.enroll.student',['students'=>$stud],['trackandstrand'=>$tands]+['gradeandsections'=>$gandsec]);
@@ -141,7 +141,7 @@ class StudentController extends Controller
             'gender' => 'required',
             'dateOfBirth' => 'required',
             'address' => 'required',
-            // 'section' => 'required',
+            'track' => 'required',
             'strandID' => 'required',
             'sectionID' => 'required',
             'schoolLastAttended' => 'required',
@@ -159,7 +159,7 @@ class StudentController extends Controller
         $student->gender = $request->input('gender');
         $student->dateOfBirth = $request->input('dateOfBirth');
         $student->address = $request->input('address');
-        $student->section = $request->input('section');
+        $student->track = $request->input('track');
         $student->strandID = $request->input('strandID');
         $student->sectionID = $request->input('sectionID');
         $student->schoolLastAttended = $request->input('schoolLastAttended');
